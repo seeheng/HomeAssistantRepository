@@ -55,6 +55,11 @@ masteraircon_timer:
       entity_id: climate.master_aircon
       fan_mode: mid
     service: climate.set_fan_mode
+  - data:
+      entity_id: climate.master_aircon
+      operation_mode: cool
+      temperature: '23'
+    service: climate.set_temperature
   - after: 00:00:00
     before: 04:00:00
     condition: time
@@ -95,6 +100,11 @@ graceaircon_timer:
       entity_id: climate.grace_aircon
       fan_mode: mid
     service: climate.set_fan_mode
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: cool
+      temperature: '23'
+    service: climate.set_temperature
   - after: 00:00:00
     before: 04:00:00
     condition: time
