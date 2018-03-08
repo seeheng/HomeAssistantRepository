@@ -1,0 +1,2 @@
+2018-03-08 21:16:04 WARNING (Thread-9) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-08 21:35:04 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
