@@ -1,0 +1,159 @@
+- action:
+  - alias: Chime
+    data:
+      entity_id: media_player.speaker_1
+      language: en-us
+      message: Motion detected
+    service: tts.google_say
+  alias: Chime if motion
+  condition: []
+  id: '1506781575316'
+  trigger:
+  - entity_id: binary_sensor.chromagic_technologies_corporation_hscp02_motion_detector_sensor_2
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: annouce
+    data:
+      entity_id: media_player.speaker_1
+      language: en-us
+      message: The sun has set
+    service: tts.google_say
+  alias: Announce sunset
+  condition: []
+  id: '1508235645908'
+  trigger:
+  - event_data: {}
+    event_type: sunset
+    platform: event
+- action:
+  - alias: study aircon timer
+    data:
+      entity_id: script.studyaircon_timer
+    service: script.turn_on
+  alias: Study Aircon Automation
+  condition: []
+  id: '1509811879624'
+  trigger:
+  - entity_id: switch.study_ac
+    from: 'off'
+    platform: state
+    to: 'on'
+- action: []
+  alias: Master Aircon Automation
+  condition: []
+  id: '1509812358770'
+  trigger: []
+- action:
+  - alias: Cancel Master Aircon Timer
+    data:
+      entity_id: script.masteraircon_timer
+    service: script.turn_off
+  alias: Cancel Master Aircon Timer
+  condition: []
+  id: '1510232557892'
+  trigger:
+  - entity_id: switch.master_ac
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - alias: cancel study aircon timer
+    data:
+      entity_id: script.studyaircon_timer
+    service: script.turn_off
+  alias: Cancel Study Aircon Timer
+  condition: []
+  id: '1510232642358'
+  trigger:
+  - entity_id: switch.study_ac
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - alias: Switch off Grace's AC
+    data:
+      entity_id: switch.graces_ac
+    service: switch.turn_off
+  alias: Grace Aircon Off at 9am
+  condition:
+  - condition: state
+    entity_id: switch.graces_ac
+    state: 'on'
+  id: '1511046223334'
+  trigger:
+  - at: 09:30
+    platform: time
+- action:
+  - data:
+      entity_id: script.xuanroom_timer
+    service: script.turn_on
+  alias: Grace Room Switch Off
+  condition: []
+  id: '1514770006047'
+  trigger:
+  - at: 00:00
+    platform: time
+  - at: 01:00
+    platform: time
+  - at: 02:00
+    platform: time
+  - at: 03:00
+    platform: time
+- action:
+  - data:
+      entity_id: script.graceaircon_timer
+    service: script.turn_on
+  alias: Grace Aircon Automation
+  condition:
+  - condition: state
+    entity_id: switch.graces_ac
+    state: 'on'
+  id: '1515242468605'
+  trigger:
+  - entity_id: switch.graces_ac
+    from: 'off'
+    platform: state
+    to: 'on'
+  - at: 00:00:00
+    platform: time
+  - at: 02:00:00
+    platform: time
+  - at: 04:00:00
+    platform: time
+  - at: 08:00:00
+    platform: time
+- action:
+  - data:
+      entity_id: script.graceaircon_timer
+    service: script.turn_off
+  alias: Cancel Grace Aircon timer
+  condition: []
+  id: '1515242567774'
+  trigger:
+  - entity_id: switch.graces_ac
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - data:
+      entity_id: script.masteraircon_timer
+    service: script.turn_on
+  alias: Test Master Aircon Climate Control
+  condition:
+  - condition: state
+    entity_id: switch.master_ac
+    state: 'on'
+  id: '1519914304778'
+  trigger:
+  - at: 04:00:00
+    platform: time
+  - at: 02:00:00
+    platform: time
+  - at: 00:00:00
+    platform: time
+  - entity_id: switch.master_ac
+    from: 'off'
+    platform: state
+    to: 'on'

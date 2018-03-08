@@ -1,0 +1,125 @@
+leavinghome:
+  alias: leaving home
+  sequence:
+  - alias: study aircon
+    data:
+      entity_id: switch.study_aircon
+    service: switch.turn_off
+  - alias: table light
+    data:
+      entitiy_id: switch.table_light
+    service: switch.turn_off
+xuanroom_timer:
+  alias: xuan room night timer
+  sequence:
+  - data:
+      entity_id: switch.graces_cove
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_downlight
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_led
+    service: homeassistant.turn_off
+studyaircon_timer:
+  alias: studyaircon timer
+  sequence:
+  - delay: 00:00:05
+  - data:
+      entity_id: climate.study_aircon
+      operation_mode: begin
+    service: climate.set_operation_mode
+  - delay: 00:20:00
+  - data:
+      entity_id: switch.study_ac
+    service: switch.turn_on
+masteraircon_timer:
+  alias: master aircon timer
+  sequence:
+  - after: 07:00:00
+    before: '23:59:00'
+    condition: time
+  - data:
+      entity_id: climate.master_aircon
+      operation_mode: cool
+      temperature: '16'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.master_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - delay: 00:10:00
+  - data:
+      entity_id: climate.master_aircon
+      fan_mode: mid
+    service: climate.set_fan_mode
+  - after: 00:00:00
+    before: 04:00:00
+    condition: time
+  - data:
+      entity_id: climate.master_aircon
+      operation_mode: dry
+      temperature: '22'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.master_aircon
+      fan_mode: low
+    service: climate.set_fan_mode
+  - after: 04:00:00
+    before: 07:00:00
+    condition: time
+  - data:
+      entity_id: climate.master_aircon
+      operation_mode: dry
+      temperature: '25'
+    service: climate.set_temperature
+graceaircon_timer:
+  alias: grace aircon timer
+  sequence:
+  - after: 07:00:00
+    before: '23:59:00'
+    condition: time
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: cool
+      temperature: '16'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - delay: 00:10:00
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: mid
+    service: climate.set_fan_mode
+  - after: 00:00:00
+    before: 04:00:00
+    condition: time
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: dry
+      temperature: '22'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: low
+    service: climate.set_fan_mode
+  - after: 04:00:00
+    before: 07:00:00
+    condition: time
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: dry
+      temperature: '24'
+    service: climate.set_temperature
+  - after: 07:00:00
+    before: '10:00:00'
+    condition: time
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: dry
+      temperature: '22'
+    service: climate.set_temperature
