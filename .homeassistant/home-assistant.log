@@ -1,4 +1,2 @@
-2018-03-09 22:11:10 WARNING (Thread-5) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
-2018-03-09 22:15:38 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-09 22:16:16 ERROR (MainThread) [homeassistant.components.emulated_hue.hue_api] Entity not found: switch.graces_fan
-2018-03-10 00:15:07 ERROR (MainThread) [homeassistant.components.emulated_hue.hue_api] Unknown entity number: 33
+2018-03-11 10:04:02 WARNING (Thread-8) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-11 10:17:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting

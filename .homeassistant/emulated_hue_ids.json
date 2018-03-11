@@ -20,6 +20,7 @@
     "26": "group.all_scripts",
     "27": "group.all_automations",
     "28": "switch.master_bed",
+    "29": "switch.grace_fan",
     "3": "switch.living_centre",
     "4": "switch.bed_light",
     "5": "switch.living_balcony",
