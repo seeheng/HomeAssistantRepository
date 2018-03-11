@@ -1,2 +1,134 @@
 2018-03-11 10:04:02 WARNING (Thread-8) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
 2018-03-11 10:17:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-11 16:12:07 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2018-03-11 16:12:07 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2018-03-11 16:12:34 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.bootstrap:Error loading /home/homeassistant/.homeassistant/configuration.yaml: Config file not found: /home/homeassistant/.homeassistant/scene.yaml
+Failed config
+  General Errors: 
+    - Error loading /home/homeassistant/.homeassistant/configuration.yaml: Config file not found: /home/homeassistant/.homeassistant/scene.yaml
+
+Successful config (partial)
+
+2018-03-11 16:16:20 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.fan: False
+          switch.graces_ac: False
+          switch.living_cove: False
+          switch.tv: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 16:18:51 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2018-03-11 16:18:51 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2018-03-11 16:20:19 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.fan: [source /home/homeassistant/.homeassistant/scenes.yaml:8]
+            state: False
+          switch.graces_ac: [source /home/homeassistant/.homeassistant/scenes.yaml:6]
+            state: False
+          switch.living_cove: [source /home/homeassistant/.homeassistant/scenes.yaml:10]
+            state: False
+          switch.tv: [source /home/homeassistant/.homeassistant/scenes.yaml:4]
+            state: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 17:17:54 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.fan: [source /home/homeassistant/.homeassistant/scenes.yaml:8]
+            state: False
+          switch.gracesaircon: [source /home/homeassistant/.homeassistant/scenes.yaml:6]
+            state: False
+          switch.livingcove: [source /home/homeassistant/.homeassistant/scenes.yaml:10]
+            state: False
+          switch.tv: [source /home/homeassistant/.homeassistant/scenes.yaml:4]
+            state: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 17:20:52 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.fan: False
+          switch.gracesaircon: False
+          switch.livingcove: False
+          switch.tv: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 17:25:00 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.tv: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 17:31:54 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
+ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
+required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
+Failed config
+  scene: 
+    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
+      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
+          switch.tv: False
+        name: LeavingHome
+
+Successful config (partial)
+  scene:
+
+2018-03-11 17:37:58 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_automations' doesn't exist!
+2018-03-11 17:38:01 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_scripts' doesn't exist!
