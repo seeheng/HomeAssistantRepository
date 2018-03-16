@@ -40,11 +40,6 @@
     from: 'off'
     platform: state
     to: 'on'
-- action: []
-  alias: Master Aircon Automation
-  condition: []
-  id: '1509812358770'
-  trigger: []
 - action:
   - alias: Cancel Master Aircon Timer
     data:
@@ -105,17 +100,13 @@
   - data:
       entity_id: script.graceaircon_timer
     service: script.turn_on
-  alias: Grace Aircon Automation
+  alias: Grace Aircon Climate Control
   condition:
   - condition: state
     entity_id: switch.graces_ac
     state: 'on'
   id: '1515242468605'
   trigger:
-  - entity_id: switch.graces_ac
-    from: 'off'
-    platform: state
-    to: 'on'
   - at: 00:00:00
     platform: time
   - at: 02:00:00
@@ -123,6 +114,10 @@
   - at: 04:00:00
     platform: time
   - at: 08:00:00
+    platform: time
+  - at: '10:00:00'
+    platform: time
+  - at: '12:00:00'
     platform: time
 - action:
   - data:
@@ -140,7 +135,7 @@
   - data:
       entity_id: script.masteraircon_timer
     service: script.turn_on
-  alias: Test Master Aircon Climate Control
+  alias: Master Aircon Climate Control
   condition:
   - condition: state
     entity_id: switch.master_ac
@@ -153,7 +148,48 @@
     platform: time
   - at: 00:00:00
     platform: time
-  - entity_id: switch.master_ac
+- action:
+  - alias: ''
+    data:
+      entity_id: climate.master_aircon
+      operation_mode: cool
+      temperature: '16'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.master_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - delay: 00:10:00
+  - data:
+      entity_id: script.masteraircon_timer
+    service: script.turn_on
+  alias: Master AC Starts
+  condition: []
+  id: '1521034095370'
+  trigger:
+  - entity_id: climate.master_aircon
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: cool
+      temperature: '16'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - delay: 00:10:00
+  - data:
+      entity_id: script.graceaircon_timer
+    service: script.turn_on
+  alias: Grace AC Starts
+  condition: []
+  id: '1521238692665'
+  trigger:
+  - entity_id: switch.graces_ac
     from: 'off'
     platform: state
     to: 'on'

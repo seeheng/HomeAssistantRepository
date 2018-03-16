@@ -1,134 +1,119 @@
-2018-03-11 10:04:02 WARNING (Thread-8) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
-2018-03-11 10:17:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-11 16:12:07 ERROR (MainThread) [aiohttp.server] Error handling request
+2018-03-15 21:18:06 WARNING (Thread-4) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-15 21:26:32 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2018-03-11 16:12:07 ERROR (MainThread) [aiohttp.server] Error handling request
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-15 21:30:50 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2018-03-11 16:12:34 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.bootstrap:Error loading /home/homeassistant/.homeassistant/configuration.yaml: Config file not found: /home/homeassistant/.homeassistant/scene.yaml
-Failed config
-  General Errors: 
-    - Error loading /home/homeassistant/.homeassistant/configuration.yaml: Config file not found: /home/homeassistant/.homeassistant/scene.yaml
-
-Successful config (partial)
-
-2018-03-11 16:16:20 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.fan: False
-          switch.graces_ac: False
-          switch.living_cove: False
-          switch.tv: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 16:18:51 ERROR (MainThread) [aiohttp.server] Error handling request
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-15 21:31:20 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2018-03-11 16:18:51 ERROR (MainThread) [aiohttp.server] Error handling request
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-15 21:36:43 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/aiohttp/web_protocol.py", line 272, in data_received
-    messages, upgraded, tail = self._request_parser.feed_data(data)
-  File "aiohttp\_http_parser.pyx", line 295, in aiohttp._http_parser.HttpParser.feed_data
-aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
-2018-03-11 16:20:19 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.fan: [source /home/homeassistant/.homeassistant/scenes.yaml:8]
-            state: False
-          switch.graces_ac: [source /home/homeassistant/.homeassistant/scenes.yaml:6]
-            state: False
-          switch.living_cove: [source /home/homeassistant/.homeassistant/scenes.yaml:10]
-            state: False
-          switch.tv: [source /home/homeassistant/.homeassistant/scenes.yaml:4]
-            state: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 17:17:54 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.fan: [source /home/homeassistant/.homeassistant/scenes.yaml:8]
-            state: False
-          switch.gracesaircon: [source /home/homeassistant/.homeassistant/scenes.yaml:6]
-            state: False
-          switch.livingcove: [source /home/homeassistant/.homeassistant/scenes.yaml:10]
-            state: False
-          switch.tv: [source /home/homeassistant/.homeassistant/scenes.yaml:4]
-            state: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 17:20:52 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.fan: False
-          switch.gracesaircon: False
-          switch.livingcove: False
-          switch.tv: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 17:25:00 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.tv: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 17:31:54 ERROR (MainThread) [homeassistant.components] Testing configuration at /home/homeassistant/.homeassistant
-ERROR:homeassistant.config:Invalid config for [scene]: required key not provided @ data['states'][0]['entities']. Got None
-required key not provided @ data['states'][0]['name']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 85). Please check the docs at https://home-assistant.io/components/scene/
-Failed config
-  scene: 
-    scene: [source /home/homeassistant/.homeassistant/scenes.yaml:1]
-      - entities: [source /home/homeassistant/.homeassistant/scenes.yaml:3]
-          switch.tv: False
-        name: LeavingHome
-
-Successful config (partial)
-  scene:
-
-2018-03-11 17:37:58 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_automations' doesn't exist!
-2018-03-11 17:38:01 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_scripts' doesn't exist!
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-16 09:30:00 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall script.turn_off: entity_id=['script.graceaircon_timer']>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1010, in _event_to_service_call
+    yield from service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/script.py", line 132, in turn_off_service
+    in component.async_extract_from_service(service)], loop=hass.loop)
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 346, in wait
+    raise ValueError('Set of coroutines/Futures is empty.')
+ValueError: Set of coroutines/Futures is empty.
+2018-03-16 22:38:25 ERROR (Thread-10) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:38:25 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:39:09 ERROR (Thread-11) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:39:09 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:39:19 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-16 22:40:28 ERROR (Thread-19) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:40:28 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:40:53 ERROR (Thread-16) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:40:53 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:41:56 ERROR (Thread-18) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:41:56 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:43:05 ERROR (Thread-6) [homeassistant.util.yaml] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 22:43:05 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
+found character '%' that cannot start any token
+  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
+2018-03-16 23:29:18 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-16 23:33:23 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-16 23:35:56 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-17 06:01:36 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall script.turn_off: entity_id=['script.graceaircon_timer']>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1010, in _event_to_service_call
+    yield from service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/script.py", line 132, in turn_off_service
+    in component.async_extract_from_service(service)], loop=hass.loop)
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 346, in wait
+    raise ValueError('Set of coroutines/Futures is empty.')
+ValueError: Set of coroutines/Futures is empty.
+2018-03-17 06:13:33 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
+2018-03-17 06:25:53 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
