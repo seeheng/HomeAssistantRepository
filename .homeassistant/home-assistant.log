@@ -1,116 +1,117 @@
-2018-03-15 21:18:06 WARNING (Thread-4) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
-2018-03-15 21:26:32 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+2018-03-17 07:14:19 WARNING (Thread-9) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-17 09:46:46 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:47:51 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:48:38 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:49:48 ERROR (Thread-14) [homeassistant.util.yaml] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 31, column 3
+2018-03-17 09:49:48 ERROR (MainThread) [homeassistant.components.group] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 31, column 3
+2018-03-17 09:50:33 ERROR (Thread-2) [homeassistant.util.yaml] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 33, column 3
+2018-03-17 09:50:33 ERROR (MainThread) [homeassistant.components.group] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 33, column 3
+2018-03-17 09:50:51 ERROR (Thread-9) [homeassistant.util.yaml] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 33, column 3
+2018-03-17 09:50:51 ERROR (MainThread) [homeassistant.components.group] while parsing a block mapping
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "/home/homeassistant/.homeassistant/groups.yaml", line 33, column 3
+2018-03-17 09:54:41 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:54:41 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:54:41 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:54:41 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:55:16 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:03 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:56:29 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:02 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:47 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:47 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:47 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 09:57:47 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:19:12 ERROR (MainThread) [frontend.js.latest.201802270] http://192.168.1.30:8123/frontend_latest/core-363542209d478158788109f8cf3068e8.js:1:6882 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:28:21 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_automations' doesn't exist!
+2018-03-17 22:28:23 WARNING (MainThread) [homeassistant.components.script] Script script.masteraircon_timer already running.
+2018-03-17 22:28:23 WARNING (MainThread) [homeassistant.components.script] Script script.graceaircon_timer already running.
+2018-03-17 22:28:26 WARNING (MainThread) [homeassistant.components.script] Script script.graceaircon_timer already running.
+2018-03-17 22:28:27 WARNING (MainThread) [homeassistant.components.script] Script script.masteraircon_timer already running.
+2018-03-17 22:28:28 WARNING (MainThread) [homeassistant.components.script] Script script.graceaircon_timer already running.
+2018-03-17 22:28:29 WARNING (MainThread) [homeassistant.components.group] remove:Group 'all_scripts' doesn't exist!
+2018-03-17 22:28:29 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
   File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
     result = coro.send(None)
   File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
     msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-15 21:30:50 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-15 21:31:20 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-15 21:36:43 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-16 09:30:00 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall script.turn_off: entity_id=['script.graceaircon_timer']>
-Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1010, in _event_to_service_call
-    yield from service_handler.func(service_call)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/script.py", line 132, in turn_off_service
-    in component.async_extract_from_service(service)], loop=hass.loop)
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 346, in wait
-    raise ValueError('Set of coroutines/Futures is empty.')
-ValueError: Set of coroutines/Futures is empty.
-2018-03-16 22:38:25 ERROR (Thread-10) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:38:25 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:39:09 ERROR (Thread-11) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:39:09 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:39:19 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-16 22:40:28 ERROR (Thread-19) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:40:28 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:40:53 ERROR (Thread-16) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:40:53 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:41:56 ERROR (Thread-18) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:41:56 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:43:05 ERROR (Thread-6) [homeassistant.util.yaml] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 22:43:05 ERROR (MainThread) [homeassistant.components.automation] while scanning for the next token
-found character '%' that cannot start any token
-  in "/home/homeassistant/.homeassistant/scripts.yaml", line 168, column 8
-2018-03-16 23:29:18 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-16 23:33:23 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-16 23:35:56 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-17 06:01:36 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall script.turn_off: entity_id=['script.graceaircon_timer']>
-Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1010, in _event_to_service_call
-    yield from service_handler.func(service_call)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/script.py", line 132, in turn_off_service
-    in component.async_extract_from_service(service)], loop=hass.loop)
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 346, in wait
-    raise ValueError('Set of coroutines/Futures is empty.')
-ValueError: Set of coroutines/Futures is empty.
-2018-03-17 06:13:33 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
-    result = coro.send(None)
-  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.graceaircon_timer
-2018-03-17 06:25:53 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: script.masteraircon_timer
+2018-03-17 22:28:29 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
   File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
     result = coro.send(None)

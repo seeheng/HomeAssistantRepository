@@ -72,3 +72,49 @@ git add .homeassistant
 git add .
 git commit -m "current"
 git push -u origin master
+git add .
+cd /home/homeassistant
+git add .
+git commit -m "current"
+git push -u origin master
+git add .
+git commit -m "current"
+git push -u origin master
+ls
+git rm ha.tar
+ls
+git commit -m "rm"
+ls
+git push origin master
+pwd
+ls -la
+git rm .ssh --cache
+git rm .ssh --cache -r
+ls -l
+ls -la
+git push origin master
+ls -l
+ls -la
+git rm .ssh --cache -r
+git commit -m "rm"
+git push origin master
+ls -la
+ls
+cd .homeassistant/
+ls
+git rm haaska.zip --cache
+git commit -m "rm"
+git push origin master
+git add .
+git commit -m current
+ls
+git push origin master
+cd /home/homeassistant/.homeassistant/
+git add .
+git commit -m "current"
+git push origin master
+ls
+ls -l
+cd ..
+vi .gitignore
+sudo vi .gitignore

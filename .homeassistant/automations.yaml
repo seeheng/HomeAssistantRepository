@@ -107,17 +107,10 @@
     state: 'on'
   id: '1515242468605'
   trigger:
-  - at: 00:00:00
-    platform: time
-  - at: 02:00:00
-    platform: time
-  - at: 04:00:00
-    platform: time
-  - at: 08:00:00
-    platform: time
-  - at: '10:00:00'
-    platform: time
-  - at: '12:00:00'
+  - hours: '/2'
+    #every 2 hours
+    minutes: 0
+    seconds: 0
     platform: time
 - action:
   - data:
@@ -142,11 +135,10 @@
     state: 'on'
   id: '1519914304778'
   trigger:
-  - at: 04:00:00
-    platform: time
-  - at: 02:00:00
-    platform: time
-  - at: 00:00:00
+  - hours: '/2'
+    minutes: 0
+    seconds: 0
+    #every 2 hours
     platform: time
 - action:
   - alias: ''
