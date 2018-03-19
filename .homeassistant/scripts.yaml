@@ -38,17 +38,6 @@ studyaircon_timer:
 graceaircon_timer:
   alias: grace aircon timer
   sequence:
-  - service: climate.set_fan_mode
-    data_template:
-      entity_id: climate.grace_aircon
-      fan_mode: >
-        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
-        mid
-        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
-        low
-        {% else %}
-        low
-        {% endif %}    
   - service: climate.set_temperature
     data_template:
       entity_id: climate.grace_aircon
@@ -64,14 +53,44 @@ graceaircon_timer:
         {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
         23
         {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
-        24
+        22
         {% else %}
-        23
+        21
+        {% endif %}    
+  - service: climate.set_fan_mode
+    data_template:
+      entity_id: climate.grace_aircon
+      fan_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        mid
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        low
+        {% else %}
+        low
         {% endif %}    
 
 masteraircon_timer:
   alias: Master Aircon Timer
   sequence:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.master_aircon
+      operation_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        cool
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        cool
+        {% else %}
+        dry
+        {% endif %}    
+      temperature: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        23
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        23
+        {% else %}
+        22
+        {% endif %}    
   - service: climate.set_fan_mode
     data_template:
       entity_id: climate.master_aircon
@@ -83,23 +102,9 @@ masteraircon_timer:
         {% else %}
         low
         {% endif %}    
-  - service: climate.set_temperature
-    data_template:
-      entity_id: climate.master_aircon
-      operation_mode: >
-        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
-        cool
-        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
-        dry
-        {% else %}
-        dry
-        {% endif %}    
-      temperature: >
-        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
-        23
-        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
-        24
-        {% else %}
-        22
-        {% endif %}    
+  - service: logbook.log
+    data:
+      name: "Master Climate Control"
+      message: >
+        running timer
 

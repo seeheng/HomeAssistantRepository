@@ -107,8 +107,7 @@
     state: 'on'
   id: '1515242468605'
   trigger:
-  - hours: '/2'
-    #every 2 hours
+  - hours: /2
     minutes: 0
     seconds: 0
     platform: time
@@ -135,10 +134,9 @@
     state: 'on'
   id: '1519914304778'
   trigger:
-  - hours: '/2'
+  - hours: /2
     minutes: 0
     seconds: 0
-    #every 2 hours
     platform: time
 - action:
   - alias: ''
@@ -159,7 +157,7 @@
   condition: []
   id: '1521034095370'
   trigger:
-  - entity_id: climate.master_aircon
+  - entity_id: switch.master_ac
     from: 'off'
     platform: state
     to: 'on'
