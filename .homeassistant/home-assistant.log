@@ -1,1 +1,3 @@
-2018-03-19 21:18:16 WARNING (Thread-13) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-25 20:00:35 WARNING (Thread-14) [homeassistant.components.emulated_hue] When targeting Google Home, listening port has to be port 80
+2018-03-25 20:01:57 ERROR (MainThread) [homeassistant.components.emulated_hue.hue_api] Entity not found: switch.table_light
+2018-03-25 20:02:19 ERROR (MainThread) [homeassistant.components.emulated_hue.hue_api] Entity not found: switch.table_light

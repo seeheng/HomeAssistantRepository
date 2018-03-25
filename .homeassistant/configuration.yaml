@@ -103,10 +103,10 @@ switch 1:
         command_on: "sgY0AAseCx4LHgoeHgoLHh4KHgsLHQseCx4KHgseHgoLHh4KCx4LHQseCx4eCh4LCx0LHQsAAS0AAAAA=="
         command_off:  "sgDmAB4JCh4KHQodCh0KHh0KCh0KHQoAAS0JHgkeCh0KHh0KCh0dCh4JCx0KHQodCx0JHh0KCh0eCgodCh0KHQoeCh0dCgodCh0KAAEtCh0KHQsdCR4dCgodHgodCgodCh0KHgodCh0eCQoeHQoKHQodCh4KHQodHgoKHQodCgABLAoeCh0JHgodHgkLHR0KHQoKHgodCh0KHQoeHQoKHR4JCh4KHQodCh0KHR4KCh0KHQoAAS0KHQodCh0KHR4KCh0eCh0KCh0KHQodCh4KHR0KCh0eCgodCh0LHQkeCh0eCQoeCh0JAAXcAAA="
 
-    tablelight:
-        friendly_name: "table light"
-        command_on: "sgo0AAseCx4LHgsdHgoLHh8KHgoLHgseCx4LHgseHgoLHh4KCx4LHgseCx4eCh4KHwoeCgsAAS0AAAAA=="
-        command_off:  "sg80AAseCx4LHgoeHgoLHh4KHgoLHgseCh4LHgoeHgsLHR8KCx4LHgseCx4LHh4KHgoeCgsAAS0AAAAA=="
+    livingsofa:
+        friendly_name: "living sofa"
+        command_on: "shc0AAocHQodChwKChwdCgocChwKHAocHAoKAAEfHQkKHB0KChwcCgodChwdCh0KHQodCh0KChwAAAAA=="
+        command_off:  "shc0AAocHQodChwKChwdCgocChwKHAocHAoKAAEfHQkKHB0KChwcCgodChwdCh0KHQodCh0KChwAAAAA=="
         
     studyaircon:
         friendly_name: "Study AC"
