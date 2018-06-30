@@ -107,9 +107,13 @@
     state: 'on'
   id: '1515242468605'
   trigger:
-  - hours: /2
-    minutes: 0
-    seconds: 0
+  - at: 00:00:00
+    platform: time
+  - at: 02:00:00
+    platform: time
+  - at: 04:00:00
+    platform: time
+  - at: 06:00:00
     platform: time
 - action:
   - data:
@@ -134,9 +138,13 @@
     state: 'on'
   id: '1519914304778'
   trigger:
-  - hours: /2
-    minutes: 0
-    seconds: 0
+  - at: 00:00:00
+    platform: time
+  - at: 02:00:00
+    platform: time
+  - at: 04:00:00
+    platform: time
+  - at: 06:00:00
     platform: time
 - action:
   - alias: ''
