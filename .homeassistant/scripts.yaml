@@ -17,6 +17,10 @@ xuanroom_timer:
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
+      entity_id: switch.graces_light
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
       entity_id: switch.graces_downlight
     service: homeassistant.turn_off
   - delay: 00:00:30
