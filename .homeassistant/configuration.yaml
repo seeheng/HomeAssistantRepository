@@ -66,6 +66,11 @@ sensor:
 tts:
   - platform: google
 
+#vacuum:
+#  - platform: xiaomi_miio
+#    host: 192.168.1.219
+#    token: 
+    
 # Cloud
 #cloud:
 
@@ -79,6 +84,15 @@ ifttt:
 emulated_hue:
 
 alexa:
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: homeassistant-1
+  username: myuser
+  password: myuser
+  discovery: true
+  discovery_prefix: homeassistant
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -235,7 +249,19 @@ switch 3:
         friendly_name: "Master AC"
         command_on: "JgC8AXM3EA0PKg8ODw0PDg8NDw4PDg8NDw4PDQ8ODw0PKg8ODw4PDQ8ODw0PDg8NDyoPKg8qDw4PDQ8qDw4PDQ8ODw0QDQ8ODw0PDg8NEA0PDg8NDw4PDQ8ODw0QDQ8ODw0PDg8NEA0PDRANDw4PDQ8ODw0PDg8ODykQKQ8ODw4PDQ8ODw0PAAFFczcQDQ8qDw0QDQ8ODw0PDg8NEA0PDRANDw4PDQ8qDw4PDRANDw0QDQ8ODw0PKg8qDyoPDg8NDyoPDg8NDw4PDQ8ODw0QDQ8ODw0PDg8NEA0PDg8pEA0PDg8pECkQKQ8ODw4PDQ8qDw0QDQ8qDyoPDRANDw4PDQ8ODw0QDQ8ODw0PKg8qDw4PKRANDyoPKg8NEA0PKg8ODykQKRANDw4PDQ8ODw0PDg8NEA0PDg8NDw4PDRANDyoPKg8qDw0PDg8NEA0PDg8NDw4PDRANDyoPKg8qDw0PDg8NDw4PDg8NDw4PDQ8ODw0QDQ8ODw0PDg8NDw4PKg8NDw4PDg8NDw4PDQ8qDw4PDQ8ODw4PDQ8ODw0PDg8ODw0PDg8NEA0PDg8NDw4PDQ8qDw4PDg8NDyoPDRApEAANBQAAAAAAAAAAAAAAAA=="
         command_off: "JgC8AXI5Dg4PKg8ODg4PDg8NDw4PDg4ODw4PDQ8ODw0PKg8ODw4PDQ8ODw0PDg8NDyoPKg8qDw4PDQ8qDw4PDg4ODw4ODg8ODw0PDg8ODg4PDg8NDw4PDg4ODw4ODg8ODw0PDg8ODw0PDg8NDw4PDg4ODw4PDQ8ODyoPKg4ODw4PDQ8ODw0PAAFGcjgPDQ8qDw4PDQ8ODw4ODg8ODw0PDg8NDw4PDg8qDg4PDg8NDw4PDQ8ODw4PKg4qDysODg8ODioPDg8ODw0PDg8NDw4PDg4ODw4PDQ8ODw0PDg8ODw0PDg8qDyoPKg4ODw4PDQ8ODyoPKg8NDyoPDg8NDw4PDg4ODw4PDQ8ODw0PKw4rDg4PDg8NDyoPKg8ODg4PKg8ODyoOKw4ODw4PDQ8ODw0PDg8ODg4PDg8NDw4PDg8NDyoPKg8qDw0PDg8ODw0PDg8NDw4PDg8NDyoPKg8qDw0PDg8ODw0PDg8NDw4PDg8NDw4PDQ8ODw0PDg8ODw0PKg8ODw0PDg8NDw4PDg4rDw0PDg8NDw4PDg8NDw4PDQ8ODw4ODg8ODw0PDg8ODg4PKg8pECoPDg4rDg4PDg8qDwANBQAAAAAAAAAAAAAAAA=="
-        
+switch 4:
+  platform: mqtt
+  name: "Optimus"
+  state_topic: "stat/sonoff/POWER"
+  command_topic: "cmnd/sonoff/POWER"
+  availability_topic: "tele/sonoff/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+
 climate:
   - platform: broadlink
     name: living_aircon
