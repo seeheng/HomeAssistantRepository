@@ -75,6 +75,9 @@
   - condition: state
     entity_id: switch.graces_ac
     state: 'off'
+  - condition: state
+    entity_id: switch.graces_fan
+    state: 'off'
   id: '1538280732545'
   trigger:
   - at: '11:00:00'
@@ -96,9 +99,16 @@
   - condition: state
     entity_id: switch.master_ac
     state: 'off'
+  - condition: state
+    entity_id: switch.master_fan
+    state: 'off'
   id: '1538282154854'
   trigger:
   - at: '11:00:00'
+    platform: time
+  - at: '14:00:00'
+    platform: time
+  - at: '17:00:00'
     platform: time
 - action:
   - data:
@@ -109,7 +119,10 @@
       entity_id: switch.master_fan
     service: switch.turn_off
   alias: fan circulation - living
-  condition: []
+  condition:
+  - condition: state
+    entity_id: switch.master_fan
+    state: 'off'
   id: '1538282253063'
   trigger:
   - at: '11:00:00'
