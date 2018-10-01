@@ -1,7 +1,7 @@
 - action:
   - alias: Cancel Master Aircon Timer
     data:
-      entity_id: automation.masteraircon_timer
+      entity_id: automation.master_ac_timer
     service: automation.turn_off
   alias: 'Master AC Cancel Timer '
   condition: []
@@ -55,7 +55,12 @@
       fan_mode: mid
     service: climate.set_fan_mode
   - data:
-      entity_id: automation.masteraircon_timer
+      entity_id: climate.master_aircon
+      operation_mode: cool
+      temperature: '22'
+    service: climate.set_temperature
+  - data:
+      entity_id: automation.master_ac_timer
     service: automation.turn_on
   alias: Master AC Starts
   condition: []
