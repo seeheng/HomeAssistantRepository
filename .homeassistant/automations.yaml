@@ -169,7 +169,7 @@
     to: home
 - action:
   - data:
-      entity_id: graces_downlight
+      entity_id: switch.graces_downlight
     service: switch.turn_on
   alias: Grace arrives home
   condition:
@@ -183,10 +183,10 @@
     to: home
 - action:
   - data:
-      entity_id: master_window
+      entity_id: switch.master_window
     service: switch.turn_on
   - data:
-      entity_id: living_cove
+      entity_id: switch.living_cove
     service: switch.turn_on
   alias: SB arrives home
   condition:
