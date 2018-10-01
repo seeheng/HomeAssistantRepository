@@ -50,17 +50,17 @@ graceaircon_task:
         {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
         cool
         {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
-        cool
+        dry
         {% else %}
         dry
         {% endif %}    
       temperature: >
         {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
-        23
-        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
         24
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        25
         {% else %}
-        23
+        24
         {% endif %}    
   - service: climate.set_fan_mode
     data_template:

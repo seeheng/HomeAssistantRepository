@@ -169,8 +169,15 @@
     to: home
 - action:
   - data:
+      entity_id: switch.living_piano
+    service: switch.turn_on
+  - delay: 00:01:00
+  - data:
       entity_id: switch.graces_downlight
     service: switch.turn_on
+  - data:
+      entity_id: switch.living_piano
+    service: switch.turn_off
   alias: Grace arrives home
   condition:
   - after: sunset
