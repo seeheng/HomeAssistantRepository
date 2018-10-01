@@ -1,9 +1,9 @@
 - action:
   - alias: Cancel Master Aircon Timer
     data:
-      entity_id: script.masteraircon_timer
-    service: script.turn_off
-  alias: Cancel Master Aircon Timer
+      entity_id: automation.masteraircon_timer
+    service: automation.turn_off
+  alias: 'Master AC Cancel Timer '
   condition: []
   id: '1510232557892'
   trigger:
@@ -14,9 +14,9 @@
 - action:
   - alias: cancel study aircon timer
     data:
-      entity_id: script.studyaircon_timer
-    service: script.turn_off
-  alias: Cancel Study Aircon Timer
+      entity_id: automation.studyaircon_timer
+    service: automation.turn_off
+  alias: Study AC Cancel Timer
   condition: []
   id: '1510232642358'
   trigger:
@@ -51,8 +51,12 @@
     service: climate.set_fan_mode
   - delay: 00:10:00
   - data:
-      entity_id: script.masteraircon_timer
-    service: script.turn_on
+      entity_id: climate.master_aircon
+      fan_mode: mid
+    service: climate.set_fan_mode
+  - data:
+      entity_id: automation.masteraircon_timer
+    service: automation.turn_on
   alias: Master AC Starts
   condition: []
   id: '1521034095370'
@@ -70,7 +74,7 @@
   - data:
       entity_id: switch.graces_fan
     service: switch.turn_off
-  alias: fan circulation - grace
+  alias: 'Grace fan timer '
   condition:
   - condition: state
     entity_id: switch.graces_ac
@@ -94,7 +98,7 @@
   - data:
       entity_id: switch.master_fan
     service: switch.turn_off
-  alias: fan circulation - master
+  alias: Master fan timer
   condition:
   - condition: state
     entity_id: switch.master_ac
@@ -112,13 +116,13 @@
     platform: time
 - action:
   - data:
-      entitiy_id: living_fan
+      entity_id: living_fan
     service: switch.turn_on
   - delay: 01:00:00
   - data:
       entity_id: switch.master_fan
     service: switch.turn_off
-  alias: fan circulation - living
+  alias: 'Living fan timer '
   condition:
   - condition: state
     entity_id: switch.master_fan
@@ -135,7 +139,7 @@
   - data:
       entitiy_id: script.xuanroom_timer
     service: script.turn_on
-  alias: Xuan night light
+  alias: Grace night light
   condition: []
   id: '1538282441058'
   trigger:
@@ -145,3 +149,127 @@
     platform: time
   - at: 02:00:00
     platform: time
+- action:
+  - data:
+      entity_id: switch.living_cove
+    service: switch.turn_on
+  alias: leesh arrive home
+  condition:
+  - after: sunset
+    condition: sun
+  id: '1538295807113'
+  trigger:
+  - entity_id: device_tracker.galaxy_s7
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: device_tracker.galaxy_tab_s2
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      entity_id: graces_downlight
+    service: switch.turn_on
+  alias: Grace arrives home
+  condition:
+  - after: sunset
+    condition: sun
+  id: '1538296795910'
+  trigger:
+  - entity_id: device_tracker.iphone
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      entity_id: master_window
+    service: switch.turn_on
+  - data:
+      entity_id: living_cove
+    service: switch.turn_on
+  alias: SB arrives home
+  condition:
+  - after: sunset
+    condition: sun
+  id: '1538297189435'
+  trigger:
+  - entity_id: device_tracker.galaxy_s9
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      entity_id: masteraircon_task
+    service: script.turn_on
+  alias: Master AC Timer
+  condition:
+  - condition: state
+    entity_id: switch.master_ac
+    state: 'on'
+  id: '1538397014363'
+  trigger:
+  - at: '23:00:00'
+    platform: time
+  - at: 00:01:00
+    platform: time
+  - at: 04:01:00
+    platform: time
+- action:
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: cool
+      temperature: '22'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - delay: 00:10:00
+  - data:
+      entity_id: climate.grace_aircon
+      operation_mode: cool
+      temperature: '25'
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.grace_aircon
+      fan_mode: high
+    service: climate.set_fan_mode
+  - data:
+      entity_id: automation.grace_ac_timer
+    service: automation.turn_on
+  alias: Grace AC Starts
+  condition: []
+  id: '1538397577374'
+  trigger:
+  - entity_id: switch.graces_ac
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: script.graceaircon_task
+    service: script.turn_on
+  alias: Grace AC Timer
+  condition:
+  - condition: state
+    entity_id: switch.graces_ac
+    state: 'on'
+  id: '1538398546507'
+  trigger:
+  - at: '23:00:00'
+    platform: time
+  - at: 00:01:00
+    platform: time
+- action:
+  - data:
+      entity_id: automation.grace_ac_timer
+    service: automation.turn_off
+  alias: Grace AC Cancel Timer
+  condition: []
+  id: '1538398672229'
+  trigger:
+  - entity_id: switch.graces_ac
+    from: 'on'
+    platform: state
+    to: 'off'
