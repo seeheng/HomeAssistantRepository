@@ -121,7 +121,7 @@
     platform: time
 - action:
   - data:
-      entity_id: living_fan
+      entity_id: switch.living_fan
     service: switch.turn_on
   - delay: 01:00:00
   - data:
@@ -156,62 +156,6 @@
     platform: time
 - action:
   - data:
-      entity_id: switch.living_cove
-    service: switch.turn_on
-  alias: leesh arrive home
-  condition:
-  - after: sunset
-    condition: sun
-  id: '1538295807113'
-  trigger:
-  - entity_id: device_tracker.galaxy_s7
-    from: not_home
-    platform: state
-    to: home
-  - entity_id: device_tracker.galaxy_tab_s2
-    from: not_home
-    platform: state
-    to: home
-- action:
-  - data:
-      entity_id: switch.living_piano
-    service: switch.turn_on
-  - delay: 00:01:00
-  - data:
-      entity_id: switch.graces_downlight
-    service: switch.turn_on
-  - data:
-      entity_id: switch.living_piano
-    service: switch.turn_off
-  alias: Grace arrives home
-  condition:
-  - after: sunset
-    condition: sun
-  id: '1538296795910'
-  trigger:
-  - entity_id: device_tracker.iphone
-    from: not_home
-    platform: state
-    to: home
-- action:
-  - data:
-      entity_id: switch.master_window
-    service: switch.turn_on
-  - data:
-      entity_id: switch.living_cove
-    service: switch.turn_on
-  alias: SB arrives home
-  condition:
-  - after: sunset
-    condition: sun
-  id: '1538297189435'
-  trigger:
-  - entity_id: device_tracker.galaxy_s9
-    from: not_home
-    platform: state
-    to: home
-- action:
-  - data:
       entity_id: masteraircon_task
     service: script.turn_on
   alias: Master AC Timer
@@ -240,7 +184,7 @@
   - delay: 00:10:00
   - data:
       entity_id: climate.grace_aircon
-      operation_mode: cool
+      operation_mode: dry
       temperature: '25'
     service: climate.set_temperature
   - data:

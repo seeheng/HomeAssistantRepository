@@ -55,12 +55,47 @@ map:
 # Track the sun
 sun:
 
+input_select:
+  leesh_status_dropdown:
+    name: leesh
+    options: 
+      - Home
+      - Just arrived
+      - Just left
+      - Away
+      - Extended away
+    initial: Home
+    
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: homeassistant-1
+  username: myuser
+  password: myuser
+  discovery: true
+  discovery_prefix: homeassistant
+
 # Weather prediction
 sensor:
   - platform: yr
   - platform: time_date
     display_options:
       - 'time'
+  - platform: template
+    sensors: 
+      leesh_status:
+        value_template: '{{ states.input_select.leesh_status_dropdown.state }}'
+        friendly_name: 'leesh'
+  - platform: mqtt
+    name: "leeshS7door"
+    state_topic: "location/door/58:C5:CB:64:6D:F8"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "leeshS7living"
+    state_topic: "location/living/58:C5:CB:64:6D:F8"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
 
 # Text to speech
 tts:
@@ -85,18 +120,17 @@ emulated_hue:
 
 alexa:
 
-mqtt:
-  broker: 127.0.0.1
-  port: 1883
-  client_id: homeassistant-1
-  username: myuser
-  password: myuser
-  discovery: true
-  discovery_prefix: homeassistant
+
+ 
+  
 
 device_tracker:
-  - platform: bluetooth_tracker
-  
+  - platform: asuswrt
+    host: 192.168.1.1
+    username: admin
+#    ssh_key: /home/pi/.ssh/id_rsa
+    password: !secret asus_password  
+       
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -352,3 +386,20 @@ climate:
         - mid
         - high
         - auto
+
+#binary_sensor:
+#  - platform: bayesian
+#    name: "leeshhome"
+#    prior: 0.1
+#    observations:
+#      - entity_id: 'device_tracker.galaxys7'
+#        prob_given_true: 0.8
+#        prob_given_false: 0.8
+#        platform: 'state'
+#        to_state: 'on'        
+#      - entity_id: 'device_tracker.galaxy_s7'
+#        prob_given_true: 0.8
+#        prob_given_false: 0.2
+#        platform: 'state'
+#        to_state: 'on'    
+        
