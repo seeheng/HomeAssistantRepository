@@ -67,5 +67,6 @@ leesh_presence:
   name: leesh Presence
   view: yes
   entities:
-    - device_tracker.raspberrypi
+    - sensor.leeshS7door
+    - sensor.leeshS7living
     

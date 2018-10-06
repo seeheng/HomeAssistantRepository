@@ -229,3 +229,76 @@
     from: 'on'
     platform: state
     to: 'off'
+- action:
+  - alias: ''
+    data:
+      entity_id: input_select.leesh_status_dropdown
+      options: Just arrived
+    service: input_select.set_options
+  alias: leesh - just arrived
+  condition:
+  - condition: state
+    entity_id: input_select.leesh_status_dropdown
+    state: Away
+  id: '1538816045697'
+  trigger:
+  - above: '10'
+    entity_id: sensor.leeshs7door
+    platform: numeric_state
+  - below: '10'
+    entity_id: sensor.leeshs7living
+    platform: numeric_state
+- action:
+  - alias: ''
+    data:
+      entity_id: input_select.leesh_status_dropdown
+      options: Home
+    service: input_select.set_options
+  alias: leesh - Home
+  condition:
+  - condition: state
+    entity_id: input_select.leesh_status_dropdown
+    state: Home
+  trigger:
+  - above: '10'
+    entity_id: sensor.leeshs7door
+    platform: numeric_state
+  - above: '10'
+    entity_id: sensor.leeshs7living
+    platform: numeric_state
+- action:
+  - alias: ''
+    data:
+      entity_id: input_select.leesh_status_dropdown
+      options: Just left
+    service: input_select.set_options
+  alias: leesh - just left
+  condition:
+  - condition: state
+    entity_id: input_select.leesh_status_dropdown
+    state: Home
+  trigger:
+  - above: '10'
+    entity_id: sensor.leeshs7door
+    platform: numeric_state
+  - below: '10'
+    entity_id: sensor.leeshs7living
+    platform: numeric_state
+- action:
+  - alias: ''
+    data:
+      entity_id: input_select.leesh_status_dropdown
+      options: Away
+    service: input_select.set_options
+  alias: leesh - away
+  condition:
+  - condition: state
+    entity_id: input_select.leesh_status_dropdown
+    state: Just left
+  trigger:
+  - below: '10'
+    entity_id: sensor.leeshs7door
+    platform: numeric_state
+  - below: '10'
+    entity_id: sensor.leeshs7living
+    platform: numeric_state
