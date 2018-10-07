@@ -87,16 +87,58 @@ sensor:
         value_template: '{{ states.input_select.leesh_status_dropdown.state }}'
         friendly_name: 'leesh'
   - platform: mqtt
-    name: "leeshS7door"
-    state_topic: "location/door/58:C5:CB:64:6D:F8"
+    name: "sh_study"
+    state_topic: "location/study/58:C5:CB:64:6D:F8"
     value_template: '{{ value_json.confidence }}'
     unit_of_measurement: '%'
   - platform: mqtt
-    name: "leeshS7living"
+    name: "sh_living"
     state_topic: "location/living/58:C5:CB:64:6D:F8"
     value_template: '{{ value_json.confidence }}'
     unit_of_measurement: '%'
+  - platform: min_max
+    name: "sh Home"
+    type: mean
+    round_digits: 0
+    entity_ids:
+      - sensor.sh_study
+      - sensor.sh_living
+  - platform: mqtt
+    name: "grace_study"
+    state_topic: "location/study/B0:70:2D:4F:9E:B7"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "grace_living"
+    state_topic: "location/living/B0:70:2D:4F:9E:B7"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
+  - platform: min_max
+    name: "grace Home"
+    type: mean
+    round_digits: 0
+    entity_ids:
+      - sensor.grace_study
+      - sensor.grace_living
+  - platform: mqtt
+    name: "sb_study"
+    state_topic: "location/study/4C:DD:31:FE:B3:A4"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "sb_living"
+    state_topic: "location/living/4C:DD:31:FE:B3:A4"
+    value_template: '{{ value_json.confidence }}'
+    unit_of_measurement: '%'
+  - platform: min_max
+    name: "SB Home"
+    type: mean
+    round_digits: 0
+    entity_ids:
+      - sensor.sb_study
+      - sensor.sb_living
 
+      
 # Text to speech
 tts:
   - platform: google

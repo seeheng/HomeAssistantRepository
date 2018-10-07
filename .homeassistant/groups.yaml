@@ -63,10 +63,26 @@ wifi:
     - device_tracker.androidf334eb6ea70a896f
     - device_tracker.raspberrypi
 
-leesh_presence:
-  name: leesh Presence
+sh_presence:
+  name: sh 
   view: yes
   entities:
-    - sensor.leeshS7door
-    - sensor.leeshS7living
+    - sensor.sh_study
+    - sensor.sh_living
+    - sensor.sh_home
     
+sb_presence:
+  name: sb
+  view: yes
+  entities:
+    - sensor.sb_study
+    - sensor.sb_living
+    - sensor.sb_home
+
+grace_presence:
+  name: grace
+  view: yes
+  entities:
+    - sensor.grace_study
+    - sensor.grace_living
+    - sensor.grace_home

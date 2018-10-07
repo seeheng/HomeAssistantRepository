@@ -1,0 +1,22 @@
+sensor.sb_home: {}
+sensor.sh_living:
+  hidden: true
+sensor.sh_study:
+  hidden: true
+sensor.sh_home: {}
+sensor.sb_study:
+  hidden: true
+sensor.sb_living:
+  hidden: true
+sensor.grace_living:
+  hidden: true
+sensor.grace_study:
+  hidden: true
+device_tracker.2c9efca52aa7:
+  hidden: true
+device_tracker.galaxys9:
+  hidden: true
+device_tracker.rmmini413995:
+  hidden: true
+device_tracker.android927aaa326e1d33f0:
+  hidden: true

@@ -230,75 +230,38 @@
     platform: state
     to: 'off'
 - action:
-  - alias: ''
-    data:
-      entity_id: input_select.leesh_status_dropdown
-      options: Just arrived
-    service: input_select.set_options
-  alias: leesh - just arrived
+  - data:
+      entity_id: switch.living_piano
+    service: switch.turn_on
+  - data:
+      entity_id: switch.study_cove
+    service: switch.turn_on
+  - delay: 00:01:00
+  - data:
+      entity_id: switch.living_piano
+    service: switch.turn_off
+  alias: leesh - arrives
   condition:
-  - condition: state
-    entity_id: input_select.leesh_status_dropdown
-    state: Away
-  id: '1538816045697'
+  - after: sunset
+    condition: sun
+  id: '1538838709220'
   trigger:
   - above: '10'
-    entity_id: sensor.leeshs7door
-    platform: numeric_state
-  - below: '10'
-    entity_id: sensor.leeshs7living
+    entity_id: sensor.sh_home
     platform: numeric_state
 - action:
-  - alias: ''
-    data:
-      entity_id: input_select.leesh_status_dropdown
-      options: Home
-    service: input_select.set_options
-  alias: leesh - Home
+  - data:
+      entity_id: switch.living_sofa
+    service: switch.turn_on
+  - data:
+      entity_id: switch.graces_light
+    service: switch.turn_on
+  alias: Grace - arrives
   condition:
-  - condition: state
-    entity_id: input_select.leesh_status_dropdown
-    state: Home
+  - after: sunset
+    condition: sun
+  id: '1538840114955'
   trigger:
   - above: '10'
-    entity_id: sensor.leeshs7door
-    platform: numeric_state
-  - above: '10'
-    entity_id: sensor.leeshs7living
-    platform: numeric_state
-- action:
-  - alias: ''
-    data:
-      entity_id: input_select.leesh_status_dropdown
-      options: Just left
-    service: input_select.set_options
-  alias: leesh - just left
-  condition:
-  - condition: state
-    entity_id: input_select.leesh_status_dropdown
-    state: Home
-  trigger:
-  - above: '10'
-    entity_id: sensor.leeshs7door
-    platform: numeric_state
-  - below: '10'
-    entity_id: sensor.leeshs7living
-    platform: numeric_state
-- action:
-  - alias: ''
-    data:
-      entity_id: input_select.leesh_status_dropdown
-      options: Away
-    service: input_select.set_options
-  alias: leesh - away
-  condition:
-  - condition: state
-    entity_id: input_select.leesh_status_dropdown
-    state: Just left
-  trigger:
-  - below: '10'
-    entity_id: sensor.leeshs7door
-    platform: numeric_state
-  - below: '10'
-    entity_id: sensor.leeshs7living
+    entity_id: sensor.grace_home
     platform: numeric_state
