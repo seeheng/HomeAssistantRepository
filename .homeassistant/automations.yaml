@@ -125,12 +125,12 @@
     service: switch.turn_on
   - delay: 01:00:00
   - data:
-      entity_id: switch.master_fan
+      entity_id: switch.living_fan
     service: switch.turn_off
   alias: 'Living fan timer '
   condition:
   - condition: state
-    entity_id: switch.master_fan
+    entity_id: switch.living_fan
     state: 'off'
   id: '1538282253063'
   trigger:
@@ -142,7 +142,7 @@
     platform: time
 - action:
   - data:
-      entitiy_id: script.xuanroom_timer
+      entitiy_id: script.xuanroom_task
     service: script.turn_on
   alias: Grace night light
   condition: []
@@ -156,7 +156,7 @@
     platform: time
 - action:
   - data:
-      entity_id: masteraircon_task
+      entity_id: script.masteraircon_task
     service: script.turn_on
   alias: Master AC Timer
   condition:
