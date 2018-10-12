@@ -52,7 +52,7 @@
   - delay: 00:10:00
   - data:
       entity_id: climate.master_aircon
-      fan_mode: mid
+      fan_mode: low
     service: climate.set_fan_mode
   - data:
       entity_id: climate.master_aircon
