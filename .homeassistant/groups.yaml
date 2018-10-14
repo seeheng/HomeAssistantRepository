@@ -40,28 +40,32 @@ master_room:
    
 wifi:
   name: Wifi
-  view: no
+  view: yes
   entities:
-    - device_tracker.seehengsipad
-    - device_tracker.amazonb0f32f114
     - device_tracker.ac220bcf9148
-    - device_tracker.googlehomemini
+    - device_tracker.galaxys7
     - device_tracker.hassbian
+    - device_tracker.raspberrypi
     - device_tracker.iphone
+    - device_tracker.seehengsipad
+    - device_tracker.galaxyj2pro
     - device_tracker.broadlink_rmproplusb52b3c
+    - device_tracker.rmmini411ff8
+    - device_tracker.rmmini413995
     - device_tracker.amazonfdb942762
     - device_tracker.amazonc088b7083
+    - device_tracker.amazonb0f32f114
+    - device_tracker.googlehomemini
     - device_tracker.rockrobo
     - device_tracker.286ed497cbdb
-    - device_tracker.esp_80e237
-    - device_tracker.rmmini411ff8
-    - device_tracker.galaxys7
     - device_tracker.5440adae3afe
     - device_tracker.s39273lsipad
     - device_tracker.7c2ebd52546e
     - device_tracker.gracesmbp
     - device_tracker.androidf334eb6ea70a896f
-    - device_tracker.raspberrypi
+    - device_tracker.1c7ee55c4f26
+    - device_tracker.esp_80e237
+    - device_tracker.esp_051287
 
 sh_presence:
   name: sh 

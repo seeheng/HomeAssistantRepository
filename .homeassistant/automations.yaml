@@ -267,3 +267,20 @@
   - above: '10'
     entity_id: sensor.grace_home
     platform: numeric_state
+- action:
+  - data:
+      entity_id: switch.study_fan
+    service: switch.turn_on
+  alias: Study Fan Timer
+  condition:
+  - condition: state
+    entity_id: switch.study_fan
+    state: 'off'
+  id: '1539483761405'
+  trigger:
+  - at: '11:00'
+    platform: time
+  - at: '14:00'
+    platform: time
+  - at: '17:00'
+    platform: time
