@@ -1,7 +1,7 @@
 
 climate:
   name: Climate Control
-  view: yes
+  view: no
   entities: 
   - climate.grace_aircon
   - climate.master_aircon
@@ -9,34 +9,44 @@ climate:
   
 living_room:
   name: Living Room
-  view: yes
+  view: no
   entities: 
   - switch.tv
   - switch.fan
   - switch.living_cove
   - switch.living_piano
   - switch.living_balcony
+  - switch.living_tv
+  - switch.living_ac
+  - switch.living_centre
+  - switch.living_fan
+  - switch.living_uplight
+  
+  
+  
   
   
 graces_room:
   name: Graces Room
-  view: yes
+  view: no
   entities: 
   - switch.graces_ac
   - switch.graces_fan
   - switch.graces_downlight
   - switch.graces_cove
   - switch.graces_bookshelf
+  - switch.graces_light
   
 master_room: 
   name: Master Room
-  view: yes
+  view: no
   entities: 
    - switch.master_ac
    - switch.master_fan
    - switch.master_cove
    - switch.master_window
    - switch.master_downlight
+   - switch.master_center
    
 wifi:
   name: Wifi

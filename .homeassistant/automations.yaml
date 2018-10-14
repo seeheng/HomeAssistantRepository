@@ -262,6 +262,12 @@
   condition:
   - after: sunset
     condition: sun
+  - below: '10'
+    condition: numeric_state
+    entity_id: sensor.sb_home
+  - below: '10'
+    condition: numeric_state
+    entity_id: sensor.sh_home
   id: '1538840114955'
   trigger:
   - above: '10'
