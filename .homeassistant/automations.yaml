@@ -193,9 +193,6 @@
       entity_id: climate.grace_aircon
       fan_mode: high
     service: climate.set_fan_mode
-  - data:
-      entity_id: automation.grace_ac_timer
-    service: automation.turn_on
   alias: Grace AC Starts
   condition: []
   id: '1538397577374'
@@ -289,4 +286,28 @@
   - at: '14:00'
     platform: time
   - at: '17:00'
+    platform: time
+- action:
+  - data:
+      entity_id: switch.master_ac
+    service: switch.turn_off
+  - data:
+      entity_id: switch.graces_ac
+    service: switch.turn_off
+  alias: NoOnesHome
+  condition:
+  - below: '10'
+    condition: numeric_state
+    entity_id: sensor.someones_home
+  id: '1540819331525'
+  trigger:
+  - at: 09:00
+    platform: time
+  - at: '10:00'
+    platform: time
+  - at: '11:00'
+    platform: time
+  - at: '12:00'
+    platform: time
+  - at: '13:00'
     platform: time
