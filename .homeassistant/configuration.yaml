@@ -145,6 +145,12 @@ sensor:
 tts:
   - platform: google
 
+google_assistant:
+  project_id: hass-6ee4e
+  client_id: !secret hass_clientid
+  access_token: !secret hass_accesstoken
+  api_key: !secret hass_apikey
+
 #vacuum:
 #  - platform: xiaomi_miio
 #    host: 192.168.1.219
