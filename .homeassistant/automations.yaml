@@ -220,6 +220,9 @@
   - data:
       entity_id: automation.grace_ac_timer
     service: automation.turn_off
+  - data:
+      entity_id: climate.graces_aircon
+    service: climate.turn_off
   alias: Grace AC Cancel Timer
   condition: []
   id: '1538398672229'
@@ -274,6 +277,10 @@
   - data:
       entity_id: switch.study_fan
     service: switch.turn_on
+  - delay: 01:00:00
+  - data:
+      entity_id: switch.study_fan
+    service: switch.turn_off
   alias: Study Fan Timer
   condition:
   - condition: state

@@ -72,11 +72,6 @@ sensor:
   - platform: time_date
     display_options:
       - 'time'
-  - platform: template
-    sensors: 
-      leesh_status:
-        value_template: '{{ states.input_select.leesh_status_dropdown.state }}'
-        friendly_name: 'leesh'
   - platform: mqtt
     name: "sh_study"
     state_topic: "location/study/58:C5:CB:64:6D:F8"
@@ -174,12 +169,11 @@ alexa:
  
   
 
-device_tracker:
-  - platform: asuswrt
-    host: 192.168.1.1
-    username: admin
-#    ssh_key: /home/pi/.ssh/id_rsa
-    password: !secret asus_password  
+#device_tracker:
+#  - platform: asuswrt
+#   host: 192.168.1.1
+#    username: admin
+#    password: !secret asus_password  
        
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -350,8 +344,8 @@ switch 1:
 # BroadLink RM Mini
 switch 2:
   platform: broadlink
-  host: 192.168.1.11
-  mac: '34:EA:34:41:39:95'
+  host: 192.168.1.14
+  mac: '78:0f:77:51:9A:c3'
   timeout: 15
   switches:
     graceaircon:
