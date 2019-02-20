@@ -325,28 +325,56 @@
       entity_id: switch.living_ac
     service: switch.turn_on
   - data:
+      entity_id: switch.living_fan
+    service: switch.turn_on
+  - data:
       entity_id: switch.graces_ac
     service: switch.turn_on
   - data:
+      entity_id: switch.graces_fan
+    service: switch.turn_on
+  - data:
       entity_id: switch.master_ac
+    service: switch.turn_on
+  - data:
+      entity_id: switch.master_fan
+    service: switch.turn_on
+  - data:
+      entity_id: switch.study_ac
+    service: switch.turn_on
+  - data:
+      entity_id: switch.study_fan
     service: switch.turn_on
   - delay: 01:00
   - data:
       entity_id: switch.master_ac
     service: switch.turn_off
   - data:
-      entity_id: switch.graces_ac
+      entity_id: switch.master_fan
+    service: switch.turn_off
+  - data:
+      entity_id: switch.study_ac
+    service: switch.turn_off
+  - data:
+      entity_id: switch.study_fan
     service: switch.turn_off
   - data:
       entity_id: switch.living_ac
+    service: switch.turn_off
+  - data:
+      entity_id: switch.living_fan
+    service: switch.turn_off
+  - data:
+      entity_id: switch.graces_ac
+    service: switch.turn_off
+  - data:
+      entity_id: switch.graces_fan
     service: switch.turn_off
   alias: holiday
   condition: []
   id: '1549067834199'
   trigger:
-  - at: '11:00'
+  - at: '19:00'
     platform: time
-  - at: '18:00'
-    platform: time
-  - at: '22:00'
+  - at: 01:00
     platform: time
