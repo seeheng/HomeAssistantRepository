@@ -27,6 +27,10 @@ xuanroom_task:
   - data:
       entity_id: switch.graces_led
     service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_virtual
+    service: homeassistant.turn_off
 studyaircon_task:
   alias: studyaircon task
   sequence:
