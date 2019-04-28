@@ -1,0 +1,352 @@
+
+
+seehengsipad:
+  hide_if_away: false
+  icon:
+  mac: A0:99:9B:B8:5B:67
+  name: See-Hengs-iPad
+  picture:
+  track: no
+  vendor: Apple, Inc.
+
+amazonb0f32f114:
+  hide_if_away: false
+  icon:
+  mac: 78:E1:03:AB:AD:25
+  name: amazon-b0f32f114
+  picture:
+  track: no
+  vendor: unknown
+
+ac220bcf9148:
+  hide_if_away: false
+  icon:
+  mac: AC:22:0B:CF:91:48
+  name: ac220bcf9148
+  picture:
+  track: no
+  vendor: unknown
+
+googlehomemini:
+  hide_if_away: false
+  icon:
+  mac: 48:D6:D5:E6:77:2F
+  name: Google-Home-Mini
+  picture:
+  track: no
+  vendor: unknown
+
+hassbian:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:5A:4B:F2
+  name: hassbian
+  picture:
+  track: true
+  vendor: unknown
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac: B0:70:2D:4F:9E:EB
+  name: iPhone
+  picture:
+  track: yes
+  vendor: unknown
+
+broadlink_rmproplusb52b3c:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:B5:2B:3C
+  name: Broadlink RMPROPLUS-b5-2b-3c
+  picture:
+  track: true
+  vendor: unknown
+
+amazonfdb942762:
+  hide_if_away: false
+  icon:
+  mac: 18:74:2E:CE:D8:A7
+  name: amazon-fdb942762
+  picture:
+  track: no
+  vendor: unknown
+
+amazonc088b7083:
+  hide_if_away: false
+  icon:
+  mac: 18:74:2E:94:27:E5
+  name: amazon-c088b7083
+  picture:
+  track: no
+  vendor: unknown
+
+rockrobo:
+  hide_if_away: false
+  icon:
+  mac: 78:11:DC:80:31:69
+  name: rockrobo
+  picture:
+  track: true
+  vendor: unknown
+
+286ed497cbdb:
+  hide_if_away: false
+  icon:
+  mac: 28:6E:D4:97:CB:DB
+  name: 286ed497cbdb
+  picture:
+  track: no
+  vendor: unknown
+
+esp_80e237:
+  hide_if_away: false
+  icon:
+  mac: 68:C6:3A:80:E2:37
+  name: ESP 80E237
+  picture:
+  track: no
+  vendor: unknown
+
+rmmini411ff8:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:41:1F:F8
+  name: RMMINI-master
+  picture:
+  track: true
+  vendor: unknown
+
+galaxys7:
+  hide_if_away: false
+  icon:
+  mac: DC:EF:CA:DD:09:B9
+  name: Galaxy-S7
+  picture:
+  track: yes
+  vendor: Murata Manufacturing Co., Ltd.
+
+5440adae3afe:
+  hide_if_away: false
+  icon:
+  mac: 54:40:AD:AE:3A:FE
+  name: 5440adae3afe
+  picture:
+  track: no
+  vendor: Samsung Electronics Co.,Ltd
+
+s39273lsipad:
+  hide_if_away: false
+  icon:
+  mac: F4:1B:A1:91:53:3D
+  name: S39273Ls-iPad
+  picture:
+  track: no
+  vendor: Apple, Inc.
+
+7c2ebd52546e:
+  hide_if_away: false
+  icon:
+  mac: 7C:2E:BD:52:54:6E
+  name: 7c2ebd52546e
+  picture:
+  track: no
+  vendor: Google, Inc.
+
+gracesmbp:
+  hide_if_away: false
+  icon:
+  mac: F4:0F:24:2A:4B:21
+  name: Graces-MBP
+  picture:
+  track: no
+  vendor: Apple, Inc.
+
+androidf334eb6ea70a896f:
+  hide_if_away: false
+  icon:
+  mac: F0:25:B7:36:DC:7F
+  name: android-f334eb6ea70a896f
+  picture:
+  track: no
+  vendor: unknown
+
+raspberrypi:
+  hide_if_away: false
+  icon:
+  mac: 00:22:C0:B0:01:23
+  name: study-rpi
+  picture:
+  track: true
+  vendor: Shenzhen Forcelink Electronic Co, Ltd
+
+staffsmbp:
+  hide_if_away: false
+  icon:
+  mac: 98:5A:EB:89:9C:E8
+  name: staffs-MBP
+  picture:
+  track: no
+  vendor: Apple, Inc.
+
+android927aaa326e1d33f0:
+  hide_if_away: false
+  icon:
+  mac: C4:2F:AE:67:11:37
+  name: android-927aaa326e1d33f0
+  picture:
+  track: true
+  vendor: unknown
+
+rmmini413995:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:41:39:95
+  name: RMMINI-Xuan
+  picture:
+  track: true
+  vendor: HangZhou Gubei Electronics Technology Co.,Ltd
+
+galaxys9:
+  hide_if_away: false
+  icon:
+  mac: 08:C5:E1:96:A9:45
+  name: Galaxy-S9
+  picture:
+  track: yes
+  vendor: SAMSUNG ELECTRO-MECHANICS(THAILAND)
+
+2c9efca52aa7:
+  hide_if_away: false
+  icon:
+  mac: 2C:9E:FC:A5:2A:A7
+  name: 2c9efca52aa7
+  picture:
+  track: no
+  vendor: CANON INC.
+
+1c7ee55c4f26:
+  hide_if_away: false
+  icon:
+  mac: 1C:7E:E5:5C:4F:26
+  name: 1c7ee55c4f26
+  picture:
+  track: no
+  vendor: D-Link International
+
+galaxyj2pro:
+  hide_if_away: false
+  icon:
+  mac: BC:54:51:31:30:2A
+  name: Galaxy-J2-Pro
+  picture:
+  track: no
+  vendor: Samsung Electronics Co.,Ltd
+
+esp_051287:
+  hide_if_away: false
+  icon:
+  mac: 2C:3A:E8:05:12:87
+  name: ESP 051287
+  picture:
+  track: no
+  vendor: Espressif Inc.
+
+galaxyj7prime:
+  hide_if_away: false
+  icon:
+  mac: 84:98:66:4E:6B:99
+  name: Galaxy-J7-Prime
+  picture:
+  track: no
+  vendor: Samsung Electronics Co.,Ltd
+
+pc0gs154:
+  hide_if_away: false
+  icon:
+  mac: B8:8A:60:E1:21:BB
+  name: PC0GS154
+  picture:
+  track: no
+  vendor: Intel Corporate
+
+mimix2ptmix2:
+  hide_if_away: false
+  icon:
+  mac: EC:D0:9F:D1:EE:61
+  name: MiMIX2-PTMix2
+  picture:
+  track: no
+  vendor: Xiaomi Communications Co Ltd
+
+android6738dc902b6f7364:
+  hide_if_away: false
+  icon:
+  mac: 58:48:22:CF:56:F5
+  name: android-6738dc902b6f7364
+  picture:
+  track: true
+  vendor: Sony Mobile Communications AB
+
+androide4d240419f0f02ce:
+  hide_if_away: false
+  icon:
+  mac: C0:BD:D1:B0:85:62
+  name: android-e4d240419f0f02ce
+  picture:
+  track: true
+  vendor: SAMSUNG ELECTRO-MECHANICS(THAILAND)
+
+galaxyj7:
+  hide_if_away: false
+  icon:
+  mac: DC:44:B6:D8:BF:07
+  name: Galaxy-J7
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+780f77519ac3:
+  hide_if_away: false
+  icon:
+  mac: 78:0F:77:51:9A:C3
+  name: 780f77519ac3
+  picture:
+  track: true
+  vendor: HangZhou Gubei Electronics Technology Co.,Ltd
+
+trinity:
+  hide_if_away: false
+  icon:
+  mac: 8C:85:90:00:4E:12
+  name: trinity
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+galaxynote5:
+  hide_if_away: false
+  icon:
+  mac: B0:72:BF:76:35:FF
+  name: Galaxy-Note5
+  picture:
+  track: true
+  vendor: Murata Manufacturing Co., Ltd.
+
+sweesair:
+  hide_if_away: false
+  icon:
+  mac: 68:A8:6D:0E:F9:B4
+  name: Swees-Air
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+rpizero1:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:B0:55:8F
+  name: rpi-zero1
+  picture:
+  track: true
+  vendor: Raspberry Pi Foundation
