@@ -1,0 +1,7 @@
+- name: LeavingHome  
+  entities:
+    switch.tv: off
+    switch.graces_fan: off
+    switch.graces_ac: off
+    switch.fan: off
+    switch.living_cove: off

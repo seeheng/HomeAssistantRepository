@@ -1,0 +1,115 @@
+leavinghome:
+  alias: leaving home
+  sequence:
+  - alias: study aircon
+    data:
+      entity_id: switch.study_aircon
+    service: switch.turn_off
+  - alias: table light
+    data:
+      entitiy_id: switch.table_light
+    service: switch.turn_off
+xuanroom_task:
+  alias: xuan room night task
+  sequence:
+  - data:
+      entity_id: switch.graces_cove
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_light
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_downlight
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_led
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.graces_virtual
+    service: homeassistant.turn_off
+studyaircon_task:
+  alias: studyaircon task
+  sequence:
+  - delay: 00:00:05
+  - data:
+      entity_id: climate.study_aircon
+      operation_mode: begin
+    service: climate.set_operation_mode
+  - delay: 00:20:00
+  - data:
+      entity_id: switch.study_ac
+    service: switch.turn_on
+    
+graceaircon_task:
+  alias: grace aircon task
+  sequence:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.grace_aircon
+      operation_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        cool
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        dry
+        {% else %}
+        dry
+        {% endif %}    
+      temperature: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        24
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        25
+        {% else %}
+        24
+        {% endif %}    
+  - service: climate.set_fan_mode
+    data_template:
+      entity_id: climate.grace_aircon
+      fan_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        mid
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        mid
+        {% else %}
+        low
+        {% endif %} 
+        
+masteraircon_task:
+  alias: Master Aircon Task
+  sequence:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.master_aircon
+      operation_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        cool
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="07:00" %}
+        cool
+        {% else %}
+        cool
+        {% endif %}    
+      temperature: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="23:59" %}
+        23
+        {% elif  now().strftime("%H:%M") >="00:00" and now().strftime("%H:%M") <="03:59" %}
+        24
+        {% elif  now().strftime("%H:%M") >="04:00" and now().strftime("%H:%M") <="07:00" %}
+        25
+        {% else %}
+        25
+        {% endif %}    
+  - service: climate.set_fan_mode
+    data_template:
+      entity_id: climate.master_aircon
+      fan_mode: >
+        {% if  now().strftime("%H:%M") >="21:00" and now().strftime("%H:%M") <="22:59" %}
+        mid
+        {% elif  now().strftime("%H:%M") >="23:00" and now().strftime("%H:%M") <="07:00" %}
+        low
+        {% else %}
+        low
+        {% endif %}    
