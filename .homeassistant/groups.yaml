@@ -1,0 +1,102 @@
+
+climate:
+  name: Climate Control
+  view: no
+  entities: 
+  - climate.grace_aircon
+  - climate.master_aircon
+  - living.aircon
+  
+living_room:
+  name: Living Room
+  view: no
+  entities: 
+  - switch.tv
+  - switch.fan
+  - switch.living_cove
+  - switch.living_piano
+  - switch.living_balcony
+  - switch.living_tv
+  - switch.living_ac
+  - switch.living_centre
+  - switch.living_fan
+  - switch.living_uplight
+  
+  
+  
+  
+  
+graces_room:
+  name: Graces Room
+  view: no
+  entities: 
+  - switch.graces_ac
+  - switch.graces_fan
+  - switch.graces_downlight
+  - switch.graces_cove
+  - switch.graces_bookshelf
+  - switch.graces_light
+  
+master_room: 
+  name: Master Room
+  view: no
+  entities: 
+   - switch.master_ac
+   - switch.master_fan
+   - switch.master_cove
+   - switch.master_window
+   - switch.master_downlight
+   - switch.master_center
+   
+wifi:
+  name: Wifi
+  view: yes
+  entities:
+    - device_tracker.ac220bcf9148
+    - device_tracker.galaxys7
+    - device_tracker.hassbian
+    - device_tracker.raspberrypi
+    - device_tracker.iphone
+    - device_tracker.seehengsipad
+    - device_tracker.galaxyj2pro
+    - device_tracker.broadlink_rmproplusb52b3c
+    - device_tracker.rmmini411ff8
+    - device_tracker.rmmini413995
+    - device_tracker.amazonfdb942762
+    - device_tracker.amazonc088b7083
+    - device_tracker.amazonb0f32f114
+    - device_tracker.googlehomemini
+    - device_tracker.rockrobo
+    - device_tracker.286ed497cbdb
+    - device_tracker.5440adae3afe
+    - device_tracker.s39273lsipad
+    - device_tracker.7c2ebd52546e
+    - device_tracker.gracesmbp
+    - device_tracker.androidf334eb6ea70a896f
+    - device_tracker.1c7ee55c4f26
+    - device_tracker.esp_80e237
+    - device_tracker.esp_051287
+
+sh_presence:
+  name: sh 
+  view: yes
+  entities:
+    - sensor.sh_study
+    - sensor.sh_living
+    - sensor.sh_home
+    
+sb_presence:
+  name: sb
+  view: yes
+  entities:
+    - sensor.sb_study
+    - sensor.sb_living
+    - sensor.sb_home
+
+grace_presence:
+  name: grace
+  view: yes
+  entities:
+    - sensor.grace_study
+    - sensor.grace_living
+    - sensor.grace_home
