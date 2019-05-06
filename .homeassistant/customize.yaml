@@ -1,0 +1,12 @@
+sensor.grace_living:
+  hidden: true
+sensor.grace_study:
+  hidden: true
+sensor.sb_living:
+  hidden: true
+sensor.sb_study:
+  hidden: true
+sensor.sh_living:
+  hidden: true
+sensor.sh_study:
+  hidden: true

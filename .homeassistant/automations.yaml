@@ -41,23 +41,23 @@
 - action:
   - alias: ''
     data:
-      entity_id: climate.master_aircon
+      entity_id: climate.master_ac
       operation_mode: cool
       temperature: '16'
     service: climate.set_temperature
   - data:
-      entity_id: climate.master_aircon
+      entity_id: climate.master_ac
       fan_mode: high
     service: climate.set_fan_mode
   - delay: 00:10:00
   - data:
-      entity_id: climate.master_aircon
+      entity_id: climate.master_ac
       fan_mode: low
     service: climate.set_fan_mode
   - data:
-      entity_id: climate.master_aircon
+      entity_id: climate.master_ac
       operation_mode: cool
-      temperature: '22'
+      temperature: '24'
     service: climate.set_temperature
   - data:
       entity_id: automation.master_ac_timer

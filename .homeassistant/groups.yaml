@@ -1,11 +1,10 @@
-
 climate:
   name: Climate Control
-  view: no
+  view: yes
   entities: 
   - climate.grace_aircon
   - climate.master_aircon
-  - living.aircon
+  - climate.living_aircon
   
 living_room:
   name: Living Room
@@ -13,40 +12,33 @@ living_room:
   entities: 
   - switch.tv
   - switch.fan
-  - switch.living_cove
-  - switch.living_piano
-  - switch.living_balcony
-  - switch.living_tv
+  - switch.livingcove
+  - switch.livingpiano
+  - switch.livingbalcony
+  - switch.livingtv
   - switch.living_ac
-  - switch.living_centre
-  - switch.living_fan
-  - switch.living_uplight
-  
-  
-  
-  
-  
+  - switch.livingcentre
+  - switch.livingfan
+
 graces_room:
   name: Graces Room
   view: no
   entities: 
   - switch.graces_ac
-  - switch.graces_fan
-  - switch.graces_downlight
-  - switch.graces_cove
-  - switch.graces_bookshelf
-  - switch.graces_light
+  - switch.gracesfan
+  - switch.gracesdownlight
+  - switch.gracescove
+  - switch.graceslight
   
 master_room: 
   name: Master Room
   view: no
   entities: 
    - switch.master_ac
-   - switch.master_fan
-   - switch.master_cove
-   - switch.master_window
-   - switch.master_downlight
-   - switch.master_center
+   - switch.masterfan
+   - switch.mastercove
+   - switch.masterwindow
+   - switch.mastercenter
    
 wifi:
   name: Wifi
@@ -81,22 +73,18 @@ sh_presence:
   name: sh 
   view: yes
   entities:
-    - sensor.sh_study
-    - sensor.sh_living
     - sensor.sh_home
     
 sb_presence:
   name: sb
   view: yes
   entities:
-    - sensor.sb_study
-    - sensor.sb_living
     - sensor.sb_home
 
 grace_presence:
   name: grace
-  view: yes
+  view: true
   entities:
-    - sensor.grace_study
-    - sensor.grace_living
     - sensor.grace_home
+    - sensor.grace_living
+    - sensor.grace_study
