@@ -2,9 +2,9 @@ climate:
   name: Climate Control
   view: yes
   entities: 
-  - climate.grace_aircon
-  - climate.master_aircon
-  - climate.living_aircon
+  - climate.grace_ac
+  - climate.master_ac
+  - climate.living_ac
   
 living_room:
   name: Living Room
@@ -16,7 +16,7 @@ living_room:
   - switch.livingpiano
   - switch.livingbalcony
   - switch.livingtv
-  - switch.living_ac
+  - climate.living_ac
   - switch.livingcentre
   - switch.livingfan
 
