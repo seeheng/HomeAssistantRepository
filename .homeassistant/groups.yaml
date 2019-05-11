@@ -2,9 +2,10 @@ climate:
   name: Climate Control
   view: yes
   entities: 
-  - climate.grace_ac
+  - climate.graces_ac
   - climate.master_ac
   - climate.living_ac
+  - climate.study_ac
   
 living_room:
   name: Living Room
@@ -24,7 +25,7 @@ graces_room:
   name: Graces Room
   view: no
   entities: 
-  - switch.graces_ac
+  - climate.graces_ac
   - switch.gracesfan
   - switch.gracesdownlight
   - switch.gracescove
@@ -34,7 +35,7 @@ master_room:
   name: Master Room
   view: no
   entities: 
-   - switch.master_ac
+   - climate.master_ac
    - switch.masterfan
    - switch.mastercove
    - switch.masterwindow
