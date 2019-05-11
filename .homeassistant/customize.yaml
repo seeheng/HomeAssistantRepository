@@ -10,3 +10,4 @@ sensor.sh_living:
   hidden: true
 sensor.sh_study:
   hidden: true
+  unit_of_measurement: '%'

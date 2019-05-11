@@ -35,7 +35,7 @@ http:
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
+#updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
@@ -66,7 +66,7 @@ mqtt:
   discovery: true
   discovery_prefix: homeassistant
 
-# Weather prediction
+# presence
 sensor:
   - platform: yr
   - platform: time_date
@@ -389,28 +389,39 @@ switch 5:
 #        prob_given_false: 0.2
 #        platform: 'state'
 #        to_state: 'on'    
-        
+
 smartir:
-  update_branch: rc 
   
 climate:
   - platform: smartir
-    name: study AC
+    name: study ac
     unique_id: study_ac
     device_code: 1020
     controller_data: 192.168.1.15
+    temperature_sensor: sensor.temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.ac_power
   - platform: smartir
-    name: graces AC
+    name: graces ac
     unique_id: graces_ac
     device_code: 1020
     controller_data: 192.168.1.14
+    temperature_sensor: sensor.temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.ac_power
   - platform: smartir
-    name: living AC
+    name: living ac
     unique_id: living_ac
     device_code: 1020
     controller_data: 192.168.1.10
+    temperature_sensor: sensor.temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.ac_power
   - platform: smartir
-    name: master AC
+    name: master ac
     unique_id: master_ac
     device_code: 1120
     controller_data: 192.168.1.12
+    temperature_sensor: sensor.temperature
+    humidity_sensor: sensor.humidity
+    power_sensor: binary_sensor.ac_power

@@ -296,30 +296,27 @@
     platform: time
   - at: '17:00'
     platform: time
-- action:
+- id: '1540819331525'
+  alias: NoOnesHome
+  trigger:
+  - below: '5'
+    entity_id: sensor.someones_home
+    for: 00:10
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: automation.holiday
+    state: 'off'
+  action:
   - data:
       entity_id: switch.master_ac
     service: switch.turn_off
   - data:
       entity_id: switch.graces_ac
     service: switch.turn_off
-  alias: NoOnesHome
-  condition:
-  - below: '10'
-    condition: numeric_state
-    entity_id: sensor.someones_home
-  id: '1540819331525'
-  trigger:
-  - at: 09:00
-    platform: time
-  - at: '10:00'
-    platform: time
-  - at: '11:00'
-    platform: time
-  - at: '12:00'
-    platform: time
-  - at: '13:00'
-    platform: time
+  - data:
+      entity_id: switch.study_ac
+    service: switch.turn_off
 - action:
   - data:
       entity_id: switch.living_ac
