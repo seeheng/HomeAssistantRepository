@@ -66,48 +66,33 @@
       operation_mode: cool
       temperature: '25'
     service: climate.set_temperature
-- action:
-  - alias: ''
-    data:
-      entity_id: switch.graces_fan
-    service: switch.turn_on
-  - delay: 02:00:00
-  - data:
-      entity_id: switch.graces_fan
-    service: switch.turn_off
+- id: '1538280732545'
   alias: 'Grace fan timer '
+  trigger:
+  - at: '11:00:00'
+    platform: time
+  - at: '14:00:00'
+    platform: time
+  - at: '17:00:00'
+    platform: time
   condition:
   - condition: state
     entity_id: switch.graces_ac
     state: 'off'
   - condition: state
-    entity_id: switch.graces_fan
+    entity_id: switch.gracesfan
     state: 'off'
-  id: '1538280732545'
-  trigger:
-  - at: '11:00:00'
-    platform: time
-  - at: '14:00:00'
-    platform: time
-  - at: '17:00:00'
-    platform: time
-- action:
-  - data:
-      entity_id: switch.master_fan
+  action:
+  - alias: ''
+    data:
+      entity_id: switch.gracesfan
     service: switch.turn_on
   - delay: 02:00:00
   - data:
-      entity_id: switch.master_fan
+      entity_id: switch.gracesfan
     service: switch.turn_off
+- id: '1538282154854'
   alias: Master fan timer
-  condition:
-  - condition: state
-    entity_id: switch.master_ac
-    state: 'off'
-  - condition: state
-    entity_id: switch.master_fan
-    state: 'off'
-  id: '1538282154854'
   trigger:
   - at: '11:00:00'
     platform: time
@@ -115,20 +100,23 @@
     platform: time
   - at: '17:00:00'
     platform: time
-- action:
+  condition:
+  - condition: state
+    entity_id: switch.masterac
+    state: 'off'
+  - condition: state
+    entity_id: switch.masterfan
+    state: 'off'
+  action:
   - data:
-      entity_id: switch.living_fan
+      entity_id: switch.masterfan
     service: switch.turn_on
   - delay: 02:00:00
   - data:
-      entity_id: switch.living_fan
+      entity_id: switch.masterfan
     service: switch.turn_off
+- id: '1538282253063'
   alias: 'Living fan timer '
-  condition:
-  - condition: state
-    entity_id: switch.living_fan
-    state: 'off'
-  id: '1538282253063'
   trigger:
   - at: '11:00:00'
     platform: time
@@ -136,6 +124,18 @@
     platform: time
   - at: '17:00:00'
     platform: time
+  condition:
+  - condition: state
+    entity_id: switch.livingfan
+    state: 'off'
+  action:
+  - data:
+      entity_id: switch.livingfan
+    service: switch.turn_on
+  - delay: 02:00:00
+  - data:
+      entity_id: switch.livingfan
+    service: switch.turn_off
 - id: '1538282441058'
   alias: Grace night light
   trigger:
@@ -152,16 +152,8 @@
   - data:
       entity_id: script.xuanroom_task
     service: script.turn_on
-- action:
-  - data:
-      entity_id: script.masteraircon_task
-    service: script.turn_on
+- id: '1538397014363'
   alias: Master AC Timer
-  condition:
-  - condition: state
-    entity_id: switch.master_ac
-    state: 'on'
-  id: '1538397014363'
   trigger:
   - at: '23:00:00'
     platform: time
@@ -169,6 +161,14 @@
     platform: time
   - at: 04:01:00
     platform: time
+  condition:
+  - condition: state
+    entity_id: switch.masterac
+    state: 'on'
+  action:
+  - data:
+      entity_id: script.masteraircon_task
+    service: script.turn_on
 - id: '1538397577374'
   alias: Grace AC Starts
   trigger:
@@ -226,36 +226,32 @@
   - data:
       entity_id: climate.graces_aircon
     service: climate.turn_off
-- action:
-  - data:
-      entity_id: switch.living_piano
-    service: switch.turn_on
-  - data:
-      entity_id: switch.study_cove
-    service: switch.turn_on
-  - delay: 00:01:00
-  - data:
-      entity_id: switch.living_piano
-    service: switch.turn_off
+- id: '1538838709220'
   alias: leesh - arrives
-  condition:
-  - after: sunset
-    condition: sun
-  - before: '23:59'
-    condition: time
-  id: '1538838709220'
   trigger:
   - above: '10'
     entity_id: sensor.sh_home
     platform: numeric_state
-- action:
+  condition:
+  - after: sunset
+    condition: sun
+  action:
   - data:
-      entity_id: switch.living_sofa
+      entity_id: switch.livingpiano
     service: switch.turn_on
   - data:
-      entity_id: switch.graces_light
+      entity_id: switch.studycove
     service: switch.turn_on
+  - delay: 00:01:00
+  - data:
+      entity_id: switch.livingpiano
+    service: switch.turn_off
+- id: '1538840114955'
   alias: Grace - arrives
+  trigger:
+  - above: '10'
+    entity_id: sensor.grace_home
+    platform: numeric_state
   condition:
   - after: sunset
     condition: sun
@@ -265,25 +261,15 @@
   - below: '10'
     condition: numeric_state
     entity_id: sensor.sh_home
-  id: '1538840114955'
-  trigger:
-  - above: '10'
-    entity_id: sensor.grace_home
-    platform: numeric_state
-- action:
+  action:
   - data:
-      entity_id: switch.study_fan
+      entity_id: switch.livingsofa
     service: switch.turn_on
-  - delay: 01:00:00
   - data:
-      entity_id: switch.study_fan
-    service: switch.turn_off
+      entity_id: switch.graceslight
+    service: switch.turn_on
+- id: '1539483761405'
   alias: Study Fan Timer
-  condition:
-  - condition: state
-    entity_id: switch.study_fan
-    state: 'off'
-  id: '1539483761405'
   trigger:
   - at: '11:00'
     platform: time
@@ -291,6 +277,18 @@
     platform: time
   - at: '17:00'
     platform: time
+  condition:
+  - condition: state
+    entity_id: switch.studyfan
+    state: 'off'
+  action:
+  - data:
+      entity_id: switch.studyfan
+    service: switch.turn_on
+  - delay: 01:00:00
+  - data:
+      entity_id: switch.studyfan
+    service: switch.turn_off
 - id: '1540819331525'
   alias: NoOnesHome
   trigger:
@@ -304,13 +302,13 @@
     state: 'off'
   action:
   - data:
-      entity_id: switch.master_ac
+      entity_id: switch.masterac
     service: switch.turn_off
   - data:
-      entity_id: switch.graces_ac
+      entity_id: switch.gracesac
     service: switch.turn_off
   - data:
-      entity_id: switch.study_ac
+      entity_id: switch.studyac
     service: switch.turn_off
 - id: '1549067834199'
   alias: holiday
@@ -325,50 +323,50 @@
       entity_id: switch.livingac
     service: switch.turn_on
   - data:
-      entity_id: switch.living_fan
+      entity_id: switch.livingfan
     service: switch.turn_on
   - data:
       entity_id: switch.gracesac
     service: switch.turn_on
   - data:
-      entity_id: switch.graces_fan
+      entity_id: switch.gracesfan
     service: switch.turn_on
   - data:
       entity_id: switch.masterac
     service: switch.turn_on
   - data:
-      entity_id: switch.master_fan
+      entity_id: switch.masterfan
     service: switch.turn_on
   - data:
       entity_id: switch.studyac
     service: switch.turn_on
   - data:
-      entity_id: switch.study_fan
+      entity_id: switch.studyfan
     service: switch.turn_on
   - delay: 01:00
   - data:
       entity_id: switch.masterac
     service: switch.turn_off
   - data:
-      entity_id: switch.master_fan
+      entity_id: switch.masterfan
     service: switch.turn_off
   - data:
       entity_id: switch.studyac
     service: switch.turn_off
   - data:
-      entity_id: switch.study_fan
+      entity_id: switch.studyfan
     service: switch.turn_off
   - data:
       entity_id: switch.livingac
     service: switch.turn_off
   - data:
-      entity_id: switch.living_fan
+      entity_id: switch.livingfan
     service: switch.turn_off
   - data:
       entity_id: switch.gracesac
     service: switch.turn_off
   - data:
-      entity_id: switch.graces_fan
+      entity_id: switch.gracesfan
     service: switch.turn_off
 - id: '1557628312169'
   alias: Study AC Starts
@@ -398,10 +396,14 @@
       entity_id: climate.study_aircon
       fan_mode: low
     service: climate.set_fan_mode
+  - data:
+      entity_id: climate.study_aircon
+      operation_mode: dry
+    service: climate.set_operation_mode
 - id: '1557660634337'
   alias: Living AC Starts
   trigger:
-  - entity_id: switch.living_ac
+  - entity_id: switch.livingac
     from: 'off'
     platform: state
     to: 'on'
@@ -428,7 +430,7 @@
 - id: '1557660882788'
   alias: Living AC Cancel Timer
   trigger:
-  - entity_id: switch.living_ac
+  - entity_id: switch.livingac
     from: 'on'
     platform: state
     to: 'off'

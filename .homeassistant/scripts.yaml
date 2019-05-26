@@ -3,7 +3,7 @@ leavinghome:
   sequence:
   - alias: study aircon
     data:
-      entity_id: switch.study_aircon
+      entity_id: switch.studyac
     service: switch.turn_off
   - alias: table light
     data:
@@ -13,23 +13,23 @@ xuanroom_task:
   alias: 'Task - Xuan Room Night '
   sequence:
   - data:
-      entity_id: switch.graces_cove
+      entity_id: switch.gracescove
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
-      entity_id: switch.graces_light
+      entity_id: switch.graceslight
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
-      entity_id: switch.graces_downlight
+      entity_id: switch.gracesdownlight
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
-      entity_id: switch.graces_led
+      entity_id: switch.gracesled
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
-      entity_id: switch.graces_virtual
+      entity_id: switch.gracesvirtual
     service: homeassistant.turn_off
 studyaircon_task:
   alias: 'Task - Study Aircon '
@@ -41,7 +41,7 @@ studyaircon_task:
     service: climate.set_operation_mode
   - delay: 00:20:00
   - data:
-      entity_id: switch.study_ac
+      entity_id: switch.studyac
     service: switch.turn_on
 graceaircon_task:
   alias: 'Task - Graces Aircon '
