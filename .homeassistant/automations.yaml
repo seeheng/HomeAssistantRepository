@@ -235,6 +235,9 @@
   condition:
   - after: sunset
     condition: sun
+  - below: '10'
+    condition: numeric_state
+    entity_id: sensor.someones_home
   action:
   - data:
       entity_id: switch.livingpiano
