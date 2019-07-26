@@ -56,7 +56,7 @@
       entity_id: climate.master_aircon
       fan_mode: high
     service: climate.set_fan_mode
-  - delay: 00:10:00
+  - delay: 00:30:00
   - data:
       entity_id: climate.master_aircon
       fan_mode: low
@@ -64,7 +64,7 @@
   - data:
       entity_id: climate.master_aircon
       operation_mode: cool
-      temperature: '25'
+      temperature: '24'
     service: climate.set_temperature
 - id: '1538280732545'
   alias: 'Grace fan timer '
@@ -235,20 +235,13 @@
   condition:
   - after: sunset
     condition: sun
-  - below: '10'
+  - below: '40'
     condition: numeric_state
     entity_id: sensor.someones_home
   action:
   - data:
-      entity_id: switch.livingpiano
+      entity_id: switch.gracesvirtual
     service: switch.turn_on
-  - data:
-      entity_id: switch.studycove
-    service: switch.turn_on
-  - delay: 00:01:00
-  - data:
-      entity_id: switch.livingpiano
-    service: switch.turn_off
 - id: '1538840114955'
   alias: Grace - arrives
   trigger:
@@ -258,16 +251,7 @@
   condition:
   - after: sunset
     condition: sun
-  - below: '10'
-    condition: numeric_state
-    entity_id: sensor.sb_home
-  - below: '10'
-    condition: numeric_state
-    entity_id: sensor.sh_home
   action:
-  - data:
-      entity_id: switch.livingsofa
-    service: switch.turn_on
   - data:
       entity_id: switch.graceslight
     service: switch.turn_on
@@ -346,7 +330,7 @@
   - data:
       entity_id: switch.studyfan
     service: switch.turn_on
-  - delay: 01:00
+  - delay: 00:30
   - data:
       entity_id: switch.masterac
     service: switch.turn_off
@@ -403,42 +387,34 @@
       entity_id: climate.study_aircon
       operation_mode: dry
     service: climate.set_operation_mode
-- id: '1557660634337'
-  alias: Living AC Starts
+- id: '1564063322656'
+  alias: Main Door Opens
   trigger:
-  - entity_id: switch.livingac
+  - entity_id: binary_sensor.main_door_contact
     from: 'off'
     platform: state
     to: 'on'
-  condition: []
+  condition:
+  - below: '50'
+    condition: numeric_state
+    entity_id: sensor.someones_home
+  - after: sunset
+    condition: sun
   action:
   - data:
-      entity_id: climate.living_aircon
-      operation_mode: cool
-    service: climate.set_operation_mode
+      payload: ''
+      topic: monitor/scan/arrive
+    service: mqtt.publish
   - data:
-      entity_id: climate.living_aircon
-      fan_mode: high
-    service: climate.set_fan_mode
-  - delay: 00:10
+      entity_id: switch.fan
+    service: switch.turn_on
   - data:
-      entity_id: climate.living_aircon
-      operation_mode: cool
-      temperature: '23'
-    service: climate.set_temperature
+      entity_id: switch.livingpiano
+    service: switch.turn_on
   - data:
-      entity_id: climate.living_aircon
-      fan_mode: low
-    service: climate.set_fan_mode
-- id: '1557660882788'
-  alias: Living AC Cancel Timer
-  trigger:
-  - entity_id: switch.livingac
-    from: 'on'
-    platform: state
-    to: 'off'
-  condition: []
-  action:
+      entity_id: switch.livingcove
+    service: switch.turn_on
+  - delay: 00:01:00
   - data:
-      entity_id: automation.living_ac_starts
-    service: automation.turn_off
+      entity_id: switch.livingpiano
+    service: switch.turn_off

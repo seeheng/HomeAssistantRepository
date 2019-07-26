@@ -11,3 +11,9 @@ sensor.sh_living:
 sensor.sh_study:
   hidden: true
   unit_of_measurement: '%'
+device_tracker.galaxys7:
+  friendly_name: Galaxy-S7 (leesh)
+device_tracker.galaxys9:
+  friendly_name: Galaxy-S9 (sweebing)
+sensor.0x00158d0003031c9b_linkquality:
+  friendly_name: main_door_linkquality

@@ -30,9 +30,11 @@ wifi:
 
 sh_presence:
   name: sh 
-  view: yes
+  view: no
   entities:
     - sensor.sh_home
+    - sensor.sh_living
+    - sensor.sh_study
     
 sb_presence:
   name: sb
@@ -45,5 +47,3 @@ grace_presence:
   view: true
   entities:
     - sensor.grace_home
-    - sensor.grace_living
-    - sensor.grace_study

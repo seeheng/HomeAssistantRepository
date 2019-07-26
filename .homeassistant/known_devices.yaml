@@ -350,3 +350,19 @@ rpizero1:
   picture:
   track: true
   vendor: Raspberry Pi Foundation
+
+iphone_de_octavio:
+  hide_if_away: false
+  icon:
+  mac: BT_4C:8D:79:56:CC:EE
+  name: iPhone de Octavio
+  picture:
+  track: true
+
+sudio_tolv:
+  hide_if_away: false
+  icon:
+  mac: BT_8A:00:00:05:76:C6
+  name: Sudio Tolv
+  picture:
+  track: true
