@@ -402,19 +402,41 @@
     condition: sun
   action:
   - data:
-      payload: ''
-      topic: monitor/scan/arrive
-    service: mqtt.publish
-  - data:
-      entity_id: switch.fan
-    service: switch.turn_on
-  - data:
       entity_id: switch.livingpiano
-    service: switch.turn_on
-  - data:
-      entity_id: switch.livingcove
     service: switch.turn_on
   - delay: 00:01:00
   - data:
       entity_id: switch.livingpiano
     service: switch.turn_off
+- id: '1564321922726'
+  alias: SB Arrives
+  trigger:
+  - above: '10'
+    entity_id: sensor.sb_home
+    platform: numeric_state
+  condition:
+  - after: sunset
+    condition: sun
+  action:
+  - data:
+      entity_id: switch.livingcove
+    service: switch.turn_on
+- id: '1564063322657'
+  alias: Main Door Opens BT
+  trigger:
+  - entity_id: binary_sensor.main_door_contact
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload: ''
+      topic: monitor/scan/arrive
+    service: mqtt.publish
+  - data: {}
+    service: mqtt.publish
+  - data:
+      payload: ''
+      topic: monitor/scan/depart
+    service: mqtt.publish

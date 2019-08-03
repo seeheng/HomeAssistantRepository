@@ -88,11 +88,11 @@ sensor:
 #    state_topic: "location/living/58:C5:CB:64:6D:F8"
 #    value_template: '{{ value_json.confidence }}'
 #    unit_of_measurement: '%'
-  - platform: mqtt
-    name: "sh_study"
-    state_topic: "monitor/closet/seehengs7"
-    value_template: '{{ value_json.confidence }}'
-    unit_of_measurement: '%'
+#  - platform: mqtt
+#    name: "sh_study"
+#    state_topic: "monitor/closet/seehengs7"
+#    value_template: '{{ value_json.confidence }}'
+#    unit_of_measurement: '%'
   - platform: mqtt
     name: "sh_living"
     state_topic: "monitor/livingroom/seehengs7"
@@ -103,7 +103,7 @@ sensor:
     type: mean
     round_digits: 0
     entity_ids:
-      - sensor.sh_study
+#      - sensor.sh_study
       - sensor.sh_living
 #  - platform: mqtt
 #    name: "grace_study"
@@ -115,11 +115,11 @@ sensor:
 #    state_topic: "location/living/B0:70:2D:4F:9E:B7"
 #    value_template: '{{ value_json.confidence }}'
 #    unit_of_measurement: '%'
-  - platform: mqtt
-    name: "grace_study"
-    state_topic: "monitor/closet/xuaniphone"
-    value_template: '{{ value_json.confidence }}'
-    unit_of_measurement: '%'
+#  - platform: mqtt
+#    name: "grace_study"
+#    state_topic: "monitor/closet/xuaniphone"
+#    value_template: '{{ value_json.confidence }}'
+#    unit_of_measurement: '%'
   - platform: mqtt
     name: "grace_living"
     state_topic: "monitor/livingroom/xuaniphone"
@@ -130,7 +130,7 @@ sensor:
     type: mean
     round_digits: 0
     entity_ids:
-      - sensor.grace_study
+#      - sensor.grace_study
       - sensor.grace_living
 #  - platform: mqtt
 #    name: "sb_study"
@@ -142,11 +142,11 @@ sensor:
 #    state_topic: "location/living/4C:DD:31:FE:B3:A4"
 #    value_template: '{{ value_json.confidence }}'
 #    unit_of_measurement: '%'
-  - platform: mqtt
-    name: "sb_study"
-    state_topic: "monitor/closet/sweebings9"
-    value_template: '{{ value_json.confidence }}'
-    unit_of_measurement: '%'
+#  - platform: mqtt
+#    name: "sb_study"
+#    state_topic: "monitor/closet/sweebings9"
+#    value_template: '{{ value_json.confidence }}'
+#    unit_of_measurement: '%'
   - platform: mqtt
     name: "sb_living"
     state_topic: "monitor/livingroom/sweebings9"
@@ -157,20 +157,24 @@ sensor:
     type: mean
     round_digits: 0
     entity_ids:
-      - sensor.sb_study
+#      - sensor.sb_study
       - sensor.sb_living
   - platform: min_max
     name: "Someones Home"
     type: mean
     round_digits: 0
     entity_ids:
-      - sensor.sb_study
+#      - sensor.sb_study
       - sensor.sb_living
-      - sensor.grace_study
+#      - sensor.grace_study
       - sensor.grace_living
-      - sensor.sh_study
+#      - sensor.sh_study
       - sensor.sh_living
-    
+  - platform: template
+    sensors:
+      th_living:
+        entity_id: sensor.th_humidity
+        value_template: '{{ sensor.th_humidity }}'
       
 # Text to speech
 #tts:
