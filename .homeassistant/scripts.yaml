@@ -9,8 +9,8 @@ leavinghome:
     data:
       entitiy_id: switch.table_light
     service: switch.turn_off
-xuanroom_task:
-  alias: 'Task - Xuan Room Night '
+night_task:
+  alias: 'Task - Night '
   sequence:
   - data:
       entity_id: switch.gracescove
@@ -29,7 +29,23 @@ xuanroom_task:
     service: homeassistant.turn_off
   - delay: 00:00:30
   - data:
-      entity_id: switch.gracesvirtual
+      entity_id: switch.studywnidow
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.livingac
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.livingcove
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.livingtv
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - data:
+      entity_id: switch.fan
     service: homeassistant.turn_off
 studyaircon_task:
   alias: 'Task - Study Aircon '
@@ -53,8 +69,8 @@ graceaircon_task:
         \ and now().strftime(\"%H:%M\") <=\"07:00\" %} dry {% else %} dry {% endif\
         \ %}    \n"
       temperature: "{% if  now().strftime(\"%H:%M\") >=\"21:00\" and now().strftime(\"\
-        %H:%M\") <=\"23:59\" %} 24 {% elif  now().strftime(\"%H:%M\") >=\"00:00\"\
-        \ and now().strftime(\"%H:%M\") <=\"07:00\" %} 25 {% else %} 24 {% endif %}\
+        %H:%M\") <=\"23:59\" %} 23 {% elif  now().strftime(\"%H:%M\") >=\"00:00\"\
+        \ and now().strftime(\"%H:%M\") <=\"07:00\" %} 23 {% else %} 23 {% endif %}\
         \    \n"
     service: climate.set_temperature
   - data_template:
@@ -75,7 +91,7 @@ masteraircon_task:
         \ %}    \n"
       temperature: "{% if  now().strftime(\"%H:%M\") >=\"21:00\" and now().strftime(\"\
         %H:%M\") <=\"23:59\" %} 23 {% elif  now().strftime(\"%H:%M\") >=\"00:00\"\
-        \ and now().strftime(\"%H:%M\") <=\"03:59\" %} 24 {% elif  now().strftime(\"\
+        \ and now().strftime(\"%H:%M\") <=\"03:59\" %} 25 {% elif  now().strftime(\"\
         %H:%M\") >=\"04:00\" and now().strftime(\"%H:%M\") <=\"07:00\" %} 25 {% else\
         \ %} 25 {% endif %}    \n"
     service: climate.set_temperature

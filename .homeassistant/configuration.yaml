@@ -35,12 +35,12 @@ http:
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-#updater:
+updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
 # Discover some devices automatically
-#discovery:
+discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -95,7 +95,7 @@ sensor:
 #    unit_of_measurement: '%'
   - platform: mqtt
     name: "sh_living"
-    state_topic: "monitor/livingroom/seehengs7"
+    state_topic: "monitor/livingroom/seehengpoco"
     value_template: '{{ value_json.confidence }}'
     unit_of_measurement: '%'
   - platform: min_max
@@ -219,8 +219,8 @@ switch 1:
   timeout: 15
   switches:
         
-    tv:
-        friendly_name: "tv"
+    denon:
+        friendly_name: "denon"
         command_on: "sgo0AAofCh4KHgoeHgsKHh4LHQsKHgofCh4KHgofHQsKHx4LCh4KHgoeCh4dCx4LHgsKHgoAAS0AAAAA=="
         command_off:  "sgAKAQscCgABLAsdCh0KHQoeHQoKHR4JHgoKHQodCh0KHQsdHQoKHR4JCx0KHQodCh0KHh0KHQoKHQoAAS0KHQodCh0KHR4KCh0dCh4JCh4KHQodCh0KHR4KCh0eCQodCx0KHQodCh0eCh0KCh0KAAEsCh0KHQsdCh0dCgodHgodCgodCh4KHQodCh0eCQsdHgkKHQodCx0KHQodHgkeCgodCgABLAodCh0KHgodHQoKHR4JHgoKHQoeChwLHQodHgkKHh0KCh0KHQoeCh0KHR4JHgoKHAsAASwKHQodCh0KHh0KCh0eCR4KCh0KHQodCh0LHR0KCh0eCgodCh0KHQodCh4eCR0KCh0KAAXcAAAAAAAAAAAAAAAAAAA=="
         
@@ -311,8 +311,8 @@ switch 1:
         command_on: "sgKEAwkrCAoICggsCCwICggrCAoIKwkKCAkJKwkrCAoIKwkJCQkJKwgKCSsIKwkKCAoIKwkJCCwIKwgKCSsICggKCCwIKwgKCCsJCQkAAVMJWAgKCSsICggrCSsJCQgrCQoIKwgKCQkILAgKCCsJCQkrCQkJKwgrCQkJKwgKCCwICggrCQkJCQkrCCsICgkJCSsJKwgKCCwICggrCAoJCQkrCCsJCQkrCAoICggrCQkJKwkrCAoJCQkrCAoIKwkrCAoIKwkJCQkJKwgsCAoIKwgKCAABVAhZCAoIKwkJCSsILAgKCCsIAAKTCFkJCQgsCAoILAgrCAoILAgKCCwICgcLCCsJCQkrCAoILAgKCCwIKwgKCCwICggrCAoJKwgKCAoILAgrCAsHCgksBywICggsCAoIKwgKCAoILAgrCAsIKwgKCAoILAgKCCwIKwgKCAsHLAgKCCwIKwkJCCwICggKCCwHLAgKCSsICggAAVMIWQkJCSsICggsCCsJCQkrCAoIKwkJCQkJKwgKCSsICggsCAkJKwkrCAoIKwkKCCsICggsCAoICggsCCsICggKCCwJKgkKCCsJCQkrCAoICggrCSsICggrCQoICQkrCQkILAgrCQoICggrCQkJKwgrCQkJKwgKCAoJKwgrCAoJKwgKCAABUwlZCAoIKwkJCSsIKwkJCSsICgkrCAoICggrCQkJKwgKCCwJCQgsCCsICggrCQoIKwkJCSsICggKCCsJKwgKCQkILAkqCQoIKwkJCSsICggKCCwIKwkJCSsICggKCCsJCQkrCSsICggKCSsICQkrCSsICgkqCQkJCQkrCCsJCggrCQkIAAFUCFkICggsCAkJKwgsCAoIKwkJCSsJCQkJCCwICQkrCQkILAkJCCwIKwkJCSsICggrCQkJKwgKCQkJKwgrCQkJCQkrCSsICgkqCQkJKwgKCQkILAgrCAoJKwgKCAoILAgJCSwIKwkJCQkILAgKCCsJKwkJCCsJCQkJCSsJKwgKCCsJCQkAAVMIWQkJCCsJCggrCSsICggrCQkJKwgKCAoILAgJCSsJCQkrCQkJKwgrCQkJKwgKCCwICggrCAoJCQkrCCsJCQkJCSwIKwgKCSoJCggrCQkJCQkrCCsJCggrCAoJCQkqCQkJLAgrCQkJCQkrCAoIKwkrCAoJKwgKCAoIKwkrCAoIKwkJCQAF3AAAAAA===="
         command_off: "sgKEAwkrCAoJKwgKCCsICggsCAoICggsCCsICggKCSsILAgKCCsICwgrCAoICgkrCCsICgkrCAoICggsCAkJLAgrCAoICggsCAoHLAgKCCwILAgKCAoIKwgsCAoIKwgKCAABVAhZCQkILAgKCCwIKwgKCCwICggrCAoICggsCAoILAgJCCwJCQgsCCsJCggrCAoILAgKCCsJCggJCSsILAgKCAoILAgrCAoJKwgKCCwICggJCSsILAgKCCsICwgJCSsICggsCCwICggKCCsICggsCAoILAgrCAoICggsCCsICggsCAoIAAFUB1oICggrCAoILAgsCAoIKwgKCCwICggKCCsICggsCAoILAgKCCwIKwgKCCwICggrCQkJKwgKCAoILAgrCAoICggsCSsICggrCAsIKwgKCAoILAgrCAoILAgKCAoILAcKCC0IKwgKCQkILAgKBywJCQkrCCsJCggKCCsJKwgKCCsJCgcAAVQIWQkJCCwICggrCSsICggrCQoIKwgKCQkILAgKCCsJCQksBwoILAgsBwsIKwgKCCwICggsCAoICggrCSsHCwgKCCwIKwgLBywICggsCAoICggrCCwICggrCAsICgcsCAoILAgsCAoICggrCQkJKwgKCCwIKwgKCAoILAgsCAoIKwgKCAABVAhZCAoIKwgLBywIKwkKCCsICggsCAoICggsCAkJKwgKCCwICggsCCsICgkrCAoIKwkKCCsICggKCCwIKwgKCQkILAkrCAoILAgKCCsICggKCCwILAcKCCwICggKCCwICggsCCsJCgcKCCwICggsCAkILAgsCAoICggrCSsICggsCAkIAAFUCFkICgkrCAoILAgrCAoILAgKCCsICggKCSsICggsCAoILAgKCCsILAgKCCwHCwgrCAoILAgKCAoIKwkrCAoICggsCCwICggrCAoILAgKCAoILAgrCAoILAgKCAoIKwgKCSsJKwgKCAoIKwkKCCsICggsCCwHCgkJCSsILAcLCCsICggAAVQIWQkJCCwHCwgrCSsICggrCQoIKwgKCAoILAgKCCsICggsCAoILAgsBwsIKwgKCCwICggrCAoICggsCCsICwgKCCwIKwgKCCwICggrCAoJCQgsCCwICggrCAoJCQkrCAoILAgsCAoICQkrCAoILAgKCCsJKwgKCAoILAgrCAoJKwgKCAAF3AAAAAA==="
 
-    gracesvirtual:
-        friendly_name: "graces virtual"
+    studywindow:
+        friendly_name: "study window"
         command_off: "sgDiAggsCAoILAgKCCsICggKCCwHLAgKCCwICggKCCsICggsCCwICggKCCsICggsCAoIKwkrCAoICggsCCsICggKCCsIAAFUCFoHCggsCAoIKwkrCAoILAcLCCsICggKCCwICQkrCQkILAgKCCwIKwgKCCwICggrCQoHLAgKCAoILAgrCAoICggsCCsICwgrCAoILAgKBwsIKwgsCAoIKwkJCAoILAgKCCwIKwgKCAoILAgKCCwICQkrCCsJCggJCSsILAgKCAoIKwgAAVQIWQgKCCsICggsCCsICwgrCAoILAcLCAkILAgKCCwICggsCAoIKwgsCAoIKwgKCCwICggrCAsICQgsCCwICggKBy0IKwgKCCwICggrCAoICggsCCsICggsCAoICggsCAkILQgrCAoICggsCAkILAgKCCwIKwgKCAoILAgrCAoICggsCAABUwhZCAoILAgKCCwIKwgKCCwICggrCAoICggsCAoIKwkJCCwJCQgsCCsICwgrCAoILAgKCCsICggKCCwIKwgKCAoILAgsCAoIKwgKCCwICggKCCsJKwgKCCsJCggJCSsICggsCCwHCwgJCSsICggsCAoIKwgsCAoICggrCCwICggKCCsIAAFUCFkICggsCAkJKwgsCAoIKwgKCCwICggKCCwICgcsCAoILAgKCCwIKwgKCCsICwgrCAoILAgKCAoIKwgsCAoICggsCCsICwcsCAoILAcLCAkJKwgrCQoIKwgKCAoILAgKCCwHLAgKCAoILAgKCCwHCggsCCsICggKCCwIKwgLCAkILAgAAVMIWggKCCwHCggsCCsICwgrCAoILAgKCAkILAgKCCwICggsCAoHLAgrCQoIKwgKCSsICggrCAsICQgsCCsICwgJCCwILAgKCCwICggrCAoICggsCCsICwgrCAoICggsBwoILAkrCAoICggrCQkILAgKCCsJKwgKCAoILAgrCAoICggsCAAF3AgKCCwHCg==AAAAAA===="
         command_on: "sgGEAwgsCAoILAcLCCsICggsCAoICggrCCwICggKCCwIKwgKCSsICggrCAsICQgsCCwICggrCAoICggsCAoILAgrCAoICggsCAoIKwgsCAoIKwgKCQkILAgrCAsICgcsCAABUwhaCAoIKwkJCCwIKwgKCCwICggrCAoICggsCAoILAgJCSsICggsCCwICggrCAoILAgKCCsICggKCCwIKwkKCAkILQcsCAoILAgKCCsICggKCCwIKwgKCCwICggKCCsICggsCCwICggKCCsICggsCCsICwgrCAoICggsCCsICggKCCwIAAFTCFkICggsCAoILAgrCAoILAgKCCsICggKCCwICgcsCAoILAgKCCwIKwgKCCwICggsBwoJKwgKCAoILAgrCAoICggsCCwICggrCAoILAgKCAoIKwgsCAoIKwgKCAoILAgKCCwIKwgKCQkILAgKCCwIKwgKCCwICggJCCwJKwgKCAoHLAgAAVQIWQgKCCwICQkrCCwICggrCAsIKwgKCAoILAcKCCwICggsCAoILAcsCAoIKwgLCCsICggsCAoICgcsCCwICggKCCwIKwgKCSsICggrCAsHCggsCCsICwgrCAoICggsCAoILAgrCAoICggsCAoIKwgsCAoIKwkJCAoILAgrCAoICggsCAABVAdaCAoIKwgKCCwIKwgLBywICggsBwsICgcsCAoILAgKBy0ICQgsCCwICggrCAoILAgKCCsICggKCCwILAcLCAkILAgsCAoIKwgLCCsICggKCCwHLAgKCCwICggKCCsICggsCCwICggKCCwHCggsCCwICggrCAoICggsCCsICggKCCwHAAFUCFoHCggsCAoILAgrCAoILAgKCCsICggKCCwICggrCQkILAgKCCwIKwgLBywICggrCAsIKwgKCAoILAgrCAoICggsCCwICggrCAoILAgKCAoILAgrCAoILAcKCAoILAgKCCwIKwgLCAkJKwgKCCwIKwgKCSsICggKCCsILAgKCAoIKwgAAVQIWQgKCCwICggrCCwICggrCAsHLAgKCAoILAgJCCwICggsCAoILAgrCAoILAgKCCsICgkrCAoICggsCCsICggKCCwILAcLCCsICggsCAoICggrCCwICggsCAkJCQgsCAoILAgsCAoICQgsCAoILAgrCAoILAgKCAoIKwgsCAoICggrCAAF3AAAAAA===="
         
@@ -379,7 +379,7 @@ switch 2:
   # BroadLink RM Mini Master
   - platform: broadlink
     host: 192.168.1.12
-    mac: '34:EA:34:41:1F:F8'
+    mac: '26:f5:a2:41:1F:F8'
     switches:    
         masterac:
           friendly_name: "master ac"
@@ -428,42 +428,70 @@ switch 2:
 smartir:
   update_branch: rc
   
-climate:
-  - platform: smartir
-    name: study aircon
-    unique_id: study_aircon
-    device_code: 1020
-    controller_data: 192.168.1.15
-    temperature_sensor: sensor.temperature
-    humidity_sensor: sensor.humidity
-    power_sensor: binary_sensor.ac_power
-  - platform: smartir
-    name: graces aircon
-    unique_id: graces_aircon
-    device_code: 1020
-    controller_data: 192.168.1.14
-    temperature_sensor: sensor.temperature
-    humidity_sensor: sensor.humidity
-    power_sensor: binary_sensor.ac_power
-  - platform: smartir
-    name: living aircon
-    unique_id: living_aircon
-    device_code: 1020
-    controller_data: 192.168.1.10
-    temperature_sensor: sensor.temperature
-    humidity_sensor: sensor.humidity
-    power_sensor: binary_sensor.ac_power
-  - platform: smartir
-    name: master aircon
-    unique_id: master_aircon
-    device_code: 1120
-    controller_data: 192.168.1.12
-    temperature_sensor: sensor.temperature
-    humidity_sensor: sensor.humidity
-    power_sensor: binary_sensor.ac_power
+#climate:
+#  - platform: smartir
+#    name: study aircon
+#    unique_id: study_aircon
+#   device_code: 1020
+#   controller_data: 192.168.1.15
+#   temperature_sensor: sensor.temperature
+#   humidity_sensor: sensor.humidity
+#   power_sensor: binary_sensor.ac_power
+# - platform: smartir
+#   name: graces aircon
+#   unique_id: graces_aircon
+#   device_code: 1020
+#   controller_data: 192.168.1.14
+#   temperature_sensor: sensor.temperature
+#   humidity_sensor: sensor.humidity
+#   power_sensor: binary_sensor.ac_power
+# - platform: smartir
+#   name: living aircon
+#   unique_id: living_aircon
+#   device_code: 1020
+#   controller_data: 192.168.1.10
+#   temperature_sensor: sensor.temperature
+#   humidity_sensor: sensor.humidity
+#   power_sensor: binary_sensor.ac_power
+# - platform: smartir
+#   name: master aircon
+#   unique_id: master_aircon
+#   device_code: 1120
+#   controller_data: 192.168.1.12
+#   temperature_sensor: sensor.temperature
+#   humidity_sensor: sensor.humidity
+#   power_sensor: binary_sensor.ac_power
 
 system_health:
 
 
 #device_tracker:
 #  - platform: bluetooth_tracker
+
+wake_on_lan:
+
+media_player:
+  - platform: webostv
+    host: 192.168.1.5
+    name: tv
+    turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: 20:17:42:d6:f7:50
+    customize:
+      sources:
+        - HDMI 2
+        - HDMI 3
+        - HDMI 4
+        - LG Content Store
+        - Netflix
+        - Other Box
+        - Spotify Music
+        - Toggle
+        - YouTube
+
+recorder:
+  purge_keep_days: 10
+  purge_interval: 1
+
+mobile_app:
